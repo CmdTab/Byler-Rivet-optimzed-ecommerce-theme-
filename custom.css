@@ -1,0 +1,507 @@
+/*
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it
+is easier to update the theme. Simply copy an existing style
+from style.css to this file, and modify it to your liking. */
+
+
+/* GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+
+
+/* Gabo Drive font - per design spec */
+@font-face {
+font-family: 'gabo_driveregular';
+src: url('http://bylerrivetsupply.com/wp-content/themes/canvas-by-optimized-ecommerce/gabodrive-webfont.eot');
+src: url('http://bylerrivetsupply.com/wp-content/themes/canvas-by-optimized-ecommerce/gabodrive-webfont.eot?#iefix') format('embedded-opentype'),
+	 url('http://bylerrivetsupply.com/wp-content/themes/canvas-by-optimized-ecommerce/gabodrive-webfont.woff2') format('woff2'),
+	 url('http://bylerrivetsupply.com/wp-content/themes/canvas-by-optimized-ecommerce/gabodrive-webfont.woff') format('woff'),
+	 url('http://bylerrivetsupply.com/wp-content/themes/canvas-by-optimized-ecommerce/gabodrive-webfont.ttf') format('truetype'),
+	 url('http://bylerrivetsupply.com/wp-content/themes/canvas-by-optimized-ecommerce/gabodrive-webfont.svg#gabo_driveregular') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+.soliloquy-wrapper h2,
+.soliloquy-caption-inside h2,
+#soliloquy-container-200 h2,
+.soliloquy-container h2,
+.soliloquy-transition-horizontal h2,
+.soliloquy-slide-horizontal h2,
+.soliloquy-arrows-active h2,
+.soliloquy-theme-base h2,
+.soliloquy-wrapper h2,
+.soliloquy-viewport h2,
+#soliloquy-200 h2,
+.soliloquy-slider h2,
+.soliloquy-slides h2,
+.soliloquy-wrap h2,
+.soliloquy-clear h2,
+.soliloquy-item h2,
+.soliloquy-item-1 h2,
+.soliloquy-image-slide h2,
+.soliloquy-caption h2,
+.soliloquy-caption-inside h2{
+font:normal 112px/84% gabo_driveregular,helvetica,sans-serif;
+padding:0;
+margin:0;
+}
+
+.soliloquy-wrapper h4,
+.soliloquy-caption-inside h4,
+#soliloquy-container-200 h4,
+.soliloquy-container h4,
+.soliloquy-transition-horizontal h4,
+.soliloquy-slide-horizontal h4,
+.soliloquy-arrows-active h4,
+.soliloquy-theme-base h4,
+.soliloquy-wrapper h4,
+.soliloquy-viewport h4,
+#soliloquy-200 h4,
+.soliloquy-slider h4,
+.soliloquy-slides h4,
+.soliloquy-wrap h4,
+.soliloquy-clear h4,
+.soliloquy-item h4,
+.soliloquy-item-1 h4,
+.soliloquy-image-slide h4,
+.soliloquy-caption h4,
+.soliloquy-caption-inside h4{
+font:normal 32px/84% gabo_driveregular,helvetica,sans-serif;
+padding:0;
+margin:8px 0;
+}
+
+#home-banner h2{
+font:normal 56px/84% gabo_driveregular,helvetica,sans-serif;
+padding:0;
+margin:5px 0;
+}
+/* /Gabo Drive font - per design spec */
+
+
+.soliloquy-caption-inside p{
+font:bold 21px/95% 'open sans',helvetica,sans-serif;
+margin:0 0 8px 0;
+padding:0;
+}
+
+
+
+#top{
+background:#434343 url('http://bylerrivetsupply.com/background-top.png') repeat-x;
+}
+
+#top ul.nav {float:right}
+#top ul.nav li a,
+#top ul.nav li a:active,
+#top ul.nav li a:focus,
+#top ul.nav li a:hover{
+color: #fff;
+/*font: 700 12px/1.6em 'Open Sans',Arial,sans-serif;*/
+}
+#top ul.nav li.current_page_item a,
+#top ul.nav li.current_page_parent a,
+#top ul.nav li.current-menu-ancestor a,
+#top ul.nav li.current-cat a,
+#top ul.nav li.current-menu-item a {
+background: none;
+color: #fff;
+}
+#top ul.nav > li:active,
+#top ul.nav > li:focus,
+#top ul.nav > li:hover,
+#top ul.nav > li a:active,
+#top ul.nav > li a:focus,
+/*#top ul.nav > li a:hover*/{
+background-color:transparent;
+}
+
+#top ul.nav li#menu-item-3506,
+#top ul.nav li#menu-item-23,
+#top ul.nav li#menu-item-22,
+#top ul.nav li#menu-item-21,
+#top ul.nav li#menu-item-20{
+padding-right:2px;
+background:transparent url('http://bylerrivetsupply.com/background-top-ul-nav-li.png') no-repeat right 5px;
+}
+
+
+
+
+#navigation {
+    background: none repeat scroll 0 0 #2D82B9;
+    border-radius: 0;
+    border-bottom: 2px solid #125685;
+}
+
+li#menu-item-40 ul.ubermenu-submenu-id-40{
+border:solid 2px #41A4E7;
+}
+
+.ubermenu .ubermenu-search input.ubermenu-search-input {
+padding: 8px 40px 8px 8px;
+}
+
+
+.ubermenu .ubermenu-search .ubermenu-searchform {
+width:auto;
+}
+
+
+
+.ubermenu .ubermenu-search .ubermenu-search-submit,
+.ubermenu .ubermenu-searchbar-drop .ubermenu-search-submit{
+position:absolute;
+width:40px;
+height:100%;
+top:0;
+right:0;
+border:none;
+background:#166399;
+cursor:pointer;
+color:#666;
+font-family:FontAwesome!important;
+font-style:normal;
+font-weight:400;
+line-height:1;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale}
+
+li#menu-item-46,
+li#menu-item-46 div.ubermenu-content-block,
+li#menu-item-46 div.ubermenu-custom-content,
+li#menu-item-46 div.ubermenu-search,
+li#menu-item-46 div.ubermenu-search form.ubermenu-searchform{
+margin:o;
+padding:0;
+}
+
+li#menu-item-46,
+li#menu-item-46 div.ubermenu-search{
+background:#2D82BB;
+height:100%;
+margin-bottom: -1px;
+margin-top: 1px;
+padding-bottom: 1px;
+padding-top: 1px;}
+
+li#menu-item-46 div.ubermenu-search form.ubermenu-searchform{
+}
+
+
+.ubermenu .ubermenu-tab > .ubermenu-target{
+font-size:100%;
+padding:6px 12px 6px 8px;
+}
+
+.ubermenu .ubermenu-tab > .ubermenu-target,
+.ubermenu-skin-flat-blue-bar .ubermenu-submenu, 
+.ubermenu-skin-flat-blue-bar .ubermenu-submenu .ubermenu-target{
+font-weight:bold;
+color:#166397;
+}
+
+
+li#menu-item-39,
+li#menu-item-40,
+li#menu-item-41,
+li#menu-item-42,
+li#menu-item-43{
+border-right:1px solid #125685;
+}
+
+
+li#menu-item-39 a[href="/"],
+li#menu-item-40 a[href="/products/"],
+li#menu-item-41 a[href="/brands/"],
+li#menu-item-42 a[href="/resources/"],
+li#menu-item-43 a[href="/tool-department/"],
+li#menu-item-44 a[href="/contact/"]{
+color: #fff;
+font-family: "Arial",sans-serif;
+font-size: 110%;
+font-style: normal;
+font-weight: 700;
+padding-left:14px;
+padding-right:14px;
+text-shadow: 0 1px 1px #24638f;
+text-transform: uppercase;
+}
+
+.ubermenu-sub-indicators .ubermenu-has-submenu-drop > .ubermenu-target:after {
+content: "";
+}
+
+
+
+.ubermenu-nojs.ubermenu-skin-flat-blue-bar .ubermenu-submenu .ubermenu-tabs .ubermenu-tab:hover > .ubermenu-target, 
+.ubermenu-skin-flat-blue-bar .ubermenu-submenu .ubermenu-tab.ubermenu-active > .ubermenu-target {
+/* background:#57ae2f;
+color: #fff; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+li#menu-item-39 a[href="/"]{
+font-size: 145%;
+padding:13px;
+}
+
+
+
+li#menu-item-39:active,
+li#menu-item-39:focus,
+li#menu-item-39:hover,
+li#menu-item-40:active,
+li#menu-item-40:focus,
+li#menu-item-40:hover,
+li#menu-item-41:active,
+li#menu-item-41:focus,
+li#menu-item-41:hover,
+li#menu-item-42:active,
+li#menu-item-42:focus,
+li#menu-item-42:hover,
+li#menu-item-43:active,
+li#menu-item-43:focus,
+li#menu-item-43:hover,
+li#menu-item-44:active,
+li#menu-item-44:focus,
+li#menu-item-44:hover{
+background:transparent url('http://bylerrivetsupply.com/primary-menu/img/background-highlight-selected-main-menu-link.png') repeat-x;
+}
+
+
+
+
+li#menu-item-46{
+width:200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+li#menu-item-60:active,
+li#menu-item-60:focus,
+li#menu-item-60:hover,
+li#menu-item-61:active,
+li#menu-item-61:focus,
+li#menu-item-61:hover,
+li#menu-item-62:active,
+li#menu-item-62:focus,
+li#menu-item-62:hover,
+li#menu-item-63:active,
+li#menu-item-63:focus,
+li#menu-item-63:hover,
+li#menu-item-64:active,
+li#menu-item-64:focus,
+li#menu-item-64:hover,
+li#menu-item-65:active,
+li#menu-item-65:focus,
+li#menu-item-65:hover,
+li#menu-item-66:active,
+li#menu-item-66:focus,
+li#menu-item-66:hover,
+li#menu-item-67:active,
+li#menu-item-67:focus,
+li#menu-item-67:hover,
+li#menu-item-68:active,
+li#menu-item-68:focus,
+li#menu-item-68:hover,
+li#menu-item-69:active,
+li#menu-item-69:focus,
+li#menu-item-69:hover,
+li#menu-item-70:active,
+li#menu-item-70:focus,
+li#menu-item-70:hover,
+li#menu-item-71:active,
+li#menu-item-71:focus,
+li#menu-item-71:hover,
+li#menu-item-72:active,
+li#menu-item-72:focus,
+li#menu-item-72:hover,
+li#menu-item-73:active,
+li#menu-item-73:focus,
+li#menu-item-73:hover,
+li#menu-item-74:active,
+li#menu-item-74:focus,
+li#menu-item-74:hover,
+li#menu-item-75:active,
+li#menu-item-75:focus,
+li#menu-item-75:hover{
+  color: #fff;
+  background:#57AE2F;
+}
+
+
+li#menu-item-60 > ul,
+li#menu-item-61 > ul,
+li#menu-item-62 > ul,
+li#menu-item-63 > ul,
+li#menu-item-64 > ul,
+li#menu-item-65 > ul,
+li#menu-item-66 > ul,
+li#menu-item-67 > ul,
+li#menu-item-68 > ul,
+li#menu-item-69 > ul,
+li#menu-item-70 > ul,
+li#menu-item-71 > ul,
+li#menu-item-72 > ul,
+li#menu-item-73 > ul,
+li#menu-item-74 > ul,
+li#menu-item-75 > ul{
+background:#fff;
+border-left: 1px solid #E2E2E2;
+margin-left: 0;
+}
+
+li#menu-item-342,
+li#menu-item-444,
+li#menu-item-445,
+li#menu-item-446,
+li#menu-item-447,
+li#menu-item-448,
+li#menu-item-449,
+li#menu-item-450,
+li#menu-item-451,
+li#menu-item-452,
+li#menu-item-453,
+li#menu-item-454{
+padding:8px;
+margin-right:0;}
+
+.ubermenu .ubermenu-item-layout-image_above > .ubermenu-image {
+margin-bottom: 0;
+margin-top: -10px;}
+
+li#text-19{
+margin:4px 0 4px 8px;
+padding:0;}
+
+li#text-19 div.textwidget,
+li#text-19 div.textwidget p{
+margin:0;
+padding:0;}
+
+
+li#text-19 div.textwidget p{
+font-size:120%;
+font-weight:bold;}
+
+
+li#text-19 div.textwidget p span.green{
+color:#57AE2F;}
+
+
+li#menu-item-342 > a,
+li#menu-item-342 > a:visited,
+li#menu-item-444 > a,
+li#menu-item-444 > a:visited,
+li#menu-item-445 > a,
+li#menu-item-445 > a:visited,
+li#menu-item-446 > a,
+li#menu-item-446 > a:visited,
+li#menu-item-447 > a,
+li#menu-item-447 > a:visited,
+li#menu-item-448 > a,
+li#menu-item-448 > a:visited,
+li#menu-item-449 > a,
+li#menu-item-449 > a:visited,
+li#menu-item-450 > a,
+li#menu-item-450 > a:visited,
+li#menu-item-451 > a,
+li#menu-item-451 > a:visited,
+li#menu-item-452 > a,
+li#menu-item-452 > a:visited,
+li#menu-item-453 > a,
+li#menu-item-453 > a:visited,
+li#menu-item-454 > a,
+li#menu-item-454 > a:visited{
+height:121px;
+max-height:121px;
+border:solid 2px #ECF3F9;
+font-size:96.25%;
+-webkit-box-shadow:0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:0px 0px 5px 0px rgba(50, 50, 50, 0.75);}
+
+li#menu-item-342 > a:active,
+li#menu-item-342 > a:focus,
+li#menu-item-342 > a:hover,
+li#menu-item-444 > a:active,
+li#menu-item-444 > a:focus,
+li#menu-item-444 > a:hover,
+li#menu-item-445 > a:active,
+li#menu-item-445 > a:focus,
+li#menu-item-445 > a:hover,
+li#menu-item-446 > a:active,
+li#menu-item-446 > a:focus,
+li#menu-item-446 > a:hover,
+li#menu-item-447 > a:active,
+li#menu-item-447 > a:focus,
+li#menu-item-447 > a:hover,
+li#menu-item-448 > a:active,
+li#menu-item-448 > a:focus,
+li#menu-item-448 > a:hover,
+li#menu-item-449 > a:active,
+li#menu-item-449 > a:focus,
+li#menu-item-449 > a:hover,
+li#menu-item-450 > a:active,
+li#menu-item-450 > a:focus,
+li#menu-item-450 > a:hover,
+li#menu-item-451 > a:active,
+li#menu-item-451 > a:focus,
+li#menu-item-451 > a:hover,
+li#menu-item-452 > a:active,
+li#menu-item-452 > a:focus,
+li#menu-item-452 > a:hover,
+li#menu-item-453 > a:active,
+li#menu-item-453 > a:focus,
+li#menu-item-453 > a:hover,
+li#menu-item-454 > a:active,
+li#menu-item-454 > a:focus,
+li#menu-item-454 > a:hover{
+border:solid 2px #70C2FA;
+color:#57AE2F;
+}
+
+
+/* DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go below this line */
+
+
+	
+}

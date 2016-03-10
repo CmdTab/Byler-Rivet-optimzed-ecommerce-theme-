@@ -1,0 +1,230 @@
+.footer {
+	padding: 1.5em 0 0;
+	max-width: none !important;
+	font-size: 0.875em;
+	@include bp(44) {
+		font-size: 1em;
+	}
+}
+
+.footer-contact {
+	background: $footer-blue;
+	color: white;
+	padding: 3em 1em;
+	font-size: 1.1em;
+	a {
+		img {
+			margin-right: 0.5em;
+		}
+	}
+	@include bp(50) {
+		padding: 3em 5em;
+	}
+	.contact-box { 
+		width: 100%;
+		padding: 1em 1em 2em;
+		height: auto !important;
+		img {
+			max-width: 30px;
+		}
+		a {
+			color: white;
+		}
+		hr {
+			width: 15em;
+			max-width: 90%;
+			margin: 1em 90% 1em 0;
+			background: $light-blue;
+		}
+		h3 {
+			color: white;
+			padding-bottom: 0.75em;
+			font-size: 1.5em;
+			font-family: 'Oswald', sans-serif;
+			text-transform: uppercase;
+		}
+		.fa {
+			margin-right: 0.25em;
+		}
+		@include bp(25) {
+			width: 50%;
+			float: left;
+			border-right: 1px solid $light-blue;
+			padding-left: 3em;
+			&:nth-child(2),
+			&:last-child {
+				border-right: none;
+			}
+			&:nth-child(3) {
+				clear: left;
+			}
+		}
+		@include bp(62.5) {
+			width: 23.5%;
+			float: left;
+			padding: 1em;
+			padding-left: 4em;
+			&:first-child {
+				width: 29.5%;
+			}
+			&:nth-child(2) {
+				border-right: 1px solid $light-blue;
+			}
+			&:nth-child(3) {
+				clear: none;
+			}
+			&:last-child {
+				border-right: none;
+			}
+			
+		}
+	}
+	.footer-address {
+		img {
+			display: block;
+		}
+		a {
+			display: block;
+		}
+		p {
+			margin: 0;
+		}
+		@include bp(30) {
+			img {
+				float: left;
+			}
+			div {
+				float: left;
+				padding-left: 1em;
+			}
+		}
+	}
+	.footer-number {
+		img {
+			display: block;
+		}
+		div {
+			display: block;
+			* {
+				line-height: 1;
+			}
+		}
+		a {
+			display: block;
+			font-weight: bold;
+
+		}
+		@include bp(30) {
+			img {
+				float: left;
+			}
+			div {
+				float: left;
+				padding-left: 1em;
+			}
+		}
+	}
+}
+.footer-copyright {
+	background: $blue;
+	padding: 2em 1em 0;
+	img {
+		max-width: 45px;
+	}
+	.language-numbers {
+		margin-bottom: 0;
+		@include bp(50) {
+			float: right;
+			margin: 0;
+			text-align: right;
+			width: 65%;
+		}
+		.english,
+		.spanish {
+			display: block;
+			padding-bottom: 2em;
+			@include bp(50) {
+				display: inline-block;
+			}
+			img {
+				display: block;
+				margin-bottom: -3.25em;
+				@include bp(50) {
+					margin: 0 0.5em -1.25em 0;
+					display: inline;
+				}
+			}
+			p {
+				display: inline-block;
+				font-weight: 800;
+				text-transform: uppercase;
+				margin-left: 4.5em;
+				color: white;
+				@include bp(50) {
+					margin: 0;
+					display: block;
+					text-align: right;
+				}
+			}
+			span {
+				color: $green;
+				font-size: 1.75em;
+				font-weight: 800;
+				display: block;
+			    margin-left: 2.75em;
+			    margin-bottom: 0.15em;
+				&:hover {
+					color: lighten($green, 15%);
+				}
+				@include bp(50) {
+					margin: 0;
+					display: inline-block;
+				}
+			}
+		}
+		.english {
+			margin-right: 2em;
+		}
+	}
+	.site-copyright {
+		p {
+			display: inline-block;
+			color: white;
+		}
+		@include bp(50) {
+			float: left;
+			width: 35%;
+		}
+	}
+	@include bp(44) {
+		display: block;
+	}
+	@include bp (50) {
+		padding: 2em;
+		.second {
+			float: right;
+			img {
+				float: left;
+			}
+			a {
+				float: left;
+			}
+		}
+	}
+	@include bp(62.5) {
+		padding: 2em 9em;
+	}
+}
+.first.contact-mobile {
+	margin-bottom: 0;
+}
+.contact-mobile {
+	display: block;
+	padding-left: 0.875em;
+	@include bp(30) {
+		padding-left: 3em;
+	}
+	@include bp(44) {
+		display: none;
+	}
+}

@@ -1,0 +1,957 @@
+/*
+Theme Name: Canvas by Optimized eCommerce
+Theme URI: http://optimizedecommerce.com/themes/wordpress-woocommerce/canvas-child-theme/
+Author: Optimized eCommerce
+Author URI: http://optimizedecommerce.com/
+Description: A child theme for <a href="http://www.woothemes.com/products/canvas/">Canvas by WooThemes</a> that is optimized with SEO in mind, as well as improved website accessibility, analytics and conversion, media enhancements, page speed, readability, responsiveness, semantics (Schema) and social engagement options. Connect with Optimized eCommmerce on <a href="https://www.facebook.com/optimizedecommerce">Facebook</a>, <a href="#">Google+</a> and <a href="https://twitter.com/optimizedecom">Twitter</a>.
+Version: 1.0
+License: Not available
+License URI: 
+Tags: canvas, canvas child theme, accessible, analytics, conversion, e-commerce, ecommerce, microformats, optimized e-commerce, optimized ecommerce, page speed, responsive, schema, semantic, translation-ready, woothemes
+Template: canvas
+*/
+@import "../canvas/css/reset.css";
+@import url("../canvas/style.css");
+/*@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);*/
+
+/* begin custom CSS -------------------------------------------- */
+
+/* product page full width ------------------------------------- */
+
+/* EO product page full width ---------------------------------- */
+
+h1, h2, h3, h4, h5{
+/*	font-family: 'Oswald', sans-serif !important; */
+	/*background-position: right 0%;*/
+}
+
+#main-nav li a{color:#fff;font-family:Arial,sans-serif;font-size:1em;font-style:normal;font-weight:700;text-shadow:0 1px 1px #24638f;text-transform:uppercase;}
+
+/* edit for home link icon */
+.fa-lg{font-size: 1.4375em;line-height: 10.75em;margin: -3px 3px;max-height: 1em;vertical-align:0;}
+.fa-home span.home-link{display:none}
+/* /edit for home link icon */
+
+/* edit to allow local/intl phone numbers in mobile view */
+.nav-toggle:before{padding:0.4375em .75em 0.4375em 0.25em}
+.nav-toggle,
+.tel-local-intl{display:inline-block;margin: 0;padding: 0;width: 100%;}
+.nav-toggle{margin:0 0 0 -1em;padding-right:2em}
+.tel-local-intl{margin:0 -1em 0 0;float:right}
+.nav-toggle a{padding:.5em}
+.tel-local-intl:before {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    content: "";
+    display: inline-block;
+    font-family: "FontAwesome";
+    font-weight: normal;
+    margin-left: 0.5em;
+    padding: 0.4375em 0.75em 0.4375em .3125em;
+    text-shadow: 0 1px 0 #000;
+}
+.tel-local-intl{background-color: rgba(0, 0, 0, 0.65);
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8));
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.tel-local-intl a{
+    margin-left:.75em;
+}
+.tel-local-intl{display:none}
+/* /edit to allow local/intl phone numbers in mobile view */
+
+/* breadcrumb */
+/* "disable" breadcrumb for homepage only */
+.home .breadcrumb {
+    display: none;
+}
+/* /"disable" breadcrumb for homepage only */
+/* "disable" Your are here: */
+.breadcrumb-title {
+display: none;
+}
+/* /"disable" Your are here: */
+/* /breadcrumb */
+
+/* my account - addresses */
+body.woocommerce-account .addresses .col-1{
+display:none;
+}
+body.woocommerce-account .addresses .address{
+float:left;
+}
+/* /my account - addresses */
+
+/* navigation border to 0 */
+#navigation {
+    border-width: 0;
+}
+/* /navigation border to 0 */
+
+/*Custom Styles by Neonbrand*/
+
+#sidebar {
+	width:20% !important;
+	min-width: 256px;
+	
+}
+
+.col-left, #main{
+	width:75% !important;
+}
+
+/*Sidebar Widget Styles*/
+
+#sidebar1 {
+	width: 256px !important;
+	height: 194px;
+	margin: 0 auto;
+}
+
+#text-neon-7 h3 {
+color:#252122;
+font: 700 22px/1.1 'open sans',helvetica,sans-serif;
+margin: 0px 0px 0.4em;
+padding: 0px 0px 0.4em;
+border:none;
+}
+
+#text-neon-7 .textwidget p{
+font:700 14px/1.6em "Open Sans",Arial,sans-serif;
+}
+
+#text-neon-8 h3{
+	font-size: 20px;
+    font-weight: bold;
+    margin: 0px 0px 0.4em;
+    padding: 0px 0px 0.4em;
+    color: #000;
+}
+
+#text-neon-8 h3{
+	font: 500 32px/1.05 gabo_driveregular,helvetica,sans-serif;
+	color: #252121;
+	border-bottom: none;
+	margin: 20px;
+	padding: 0 0 0;
+	width: 120px;
+	line-height: 1.1;
+	position: relative;
+	top: 10px;
+	display: block !important;
+}
+
+#text-neon-8 h3 a[href="/tool-department/repair/"],
+#text-neon-8 h3 a[href="/tool-department/repair/"]:active,
+#text-neon-8 h3 a[href="/tool-department/repair/"]:focus,
+#text-neon-8 h3 a[href="/tool-department/repair/"]:hover,
+#text-neon-8 h3 a[href="/tool-department/repair/"]:visited{
+text-decoration:none;
+border:0;
+color:#2d83bb;
+}
+
+#text-neon-8 h3 a[href="/tool-department/repair/"] > span,
+#text-neon-8 h3 a[href="/tool-department/repair/"]:active > span,
+#text-neon-8 h3 a[href="/tool-department/repair/"]:focus > span,
+#text-neon-8 h3 a[href="/tool-department/repair/"]:hover > span,
+#text-neon-8 h3 a[href="/tool-department/repair/"]:visited > span{
+color:#232122;
+}
+
+#text-neon-8 ul{
+margin-left: 12px;
+}
+
+
+#text-neon-8 ul li{
+float:left;
+list-style:none;
+margin-left: 5px;
+}
+
+#text-neon-8 #sub{
+background-image: url('/background-sidebar-tool-repair-need-a-quote.png');
+min-height:63px;
+width: 256px;
+margin-top: 60px;
+color: #FFF;
+padding: 5px 20px 0;
+font-size: 26px;
+font-family: 'Oswald', sans-serif !important;
+line-height:1.1;
+}
+
+
+#text-neon-8 #sub .need-quote{
+text-transform:uppercase;
+font-size:57.5%;
+margin-top:-3px;
+}
+
+#text-neon-8 #sub .call,
+#text-neon-8 #sub .phone{
+text-transform:uppercase;
+font-size:85%;
+font-weight:bold;
+margin-top:-3px;
+}
+
+#text-neon-8 #sub .phone{
+color:#67bd3e;
+padding-left:32px;
+background:transparent url('/background-sidebar-tool-repair-need-a-quote-phone-icon.png') no-repeat 1px 5px;
+}
+
+
+
+#text-neon-9{
+	background-repeat:no-repeat;
+	min-height:132px;
+	margin-bottom:20px;
+}
+
+#text-neon-9 h3{
+	font: 500 32px/1.05 gabo_driveregular,helvetica,sans-serif;
+	color: #252121;
+	border-bottom: none;
+	margin: 17px 20px 20px 20px;
+	padding: 0 0 0;
+	line-height: 1.1;
+	position: relative;
+	top: 29px;
+	display: block !important;
+}
+
+
+#text-neon-9 h3 a[href="/resources/#product-support"],
+#text-neon-9 h3 a[href="/resources/#product-support"]:active,
+#text-neon-9 h3 a[href="/resources/#product-support"]:focus,
+#text-neon-9 h3 a[href="/resources/#product-support"]:hover,
+#text-neon-9 h3 a[href="/resources/#product-support"]:visited{
+text-decoration:none;
+border:0;
+color:#2d83bb;
+}
+
+#text-neon-9 h3 a[href="/resources/#product-support"] > span,
+#text-neon-9 h3 a[href="/resources/#product-support"]:active > span,
+#text-neon-9 h3 a[href="/resources/#product-support"]:focus > span,
+#text-neon-9 h3 a[href="/resources/#product-support"]:hover > span,
+#text-neon-9 h3 a[href="/resources/#product-support"]:visited > span{
+color:#232122;
+}
+
+
+#text-neon-9 ul{
+	position:relative;
+	top:5px;
+}
+
+#text-neon-9 li{
+	text-align: right;
+	margin-right: 10px;
+	padding-right: 20px;
+	background-image: url(/wp-content/uploads/point-icon.png);
+	background-position: right 7px;
+	background-repeat: no-repeat;
+	background-size: 13px;	
+}
+
+#text-neon-9 li a{
+	color:#232120;
+}
+
+#text-neon-9 a[href="/resources/videos/"]{
+    display: inline-block;
+    margin: 9px 0 0;
+    padding: 0;
+}
+
+#text-neon-9 #vidbutton{
+	background-color: #242021;
+	color: #FFF;
+	width: 80px;
+	text-align: center;
+	float: left !important;
+	font:bold 84% "open sans",helvetica,sans-serif;
+	position: relative;
+	left: 140px;
+	top: 20px;
+	padding:11px 38px 0px 0px;
+	background-image: url(/wp-content/uploads/video-icon.png);
+	background-repeat: no-repeat;
+	background-position: 77px 5px;
+	background-size: 30px;	
+	min-height: 28px;
+}
+
+
+
+#text-neon-10 {
+	height:173px;
+	width:252px;
+}
+#text-neon-10 h3{
+	font: 500 32px/1.05 gabo_driveregular,helvetica,sans-serif;
+	color: #252121;
+	border-bottom: none;
+	margin: 20px;
+	padding: 0 0 0;
+	line-height: 1.1;
+	position: relative;
+	top: 10px;
+	display: block !important;
+	width: 130px;
+}
+
+
+#text-neon-10 h3 a[href="/account/#register"],
+#text-neon-10 h3 a[href="/account/#register"]:active,
+#text-neon-10 h3 a[href="/account/#register"]:focus,
+#text-neon-10 h3 a[href="/account/#register"]:hover,
+#text-neon-10 h3 a[href="/account/#register"]:visited{
+text-decoration:none;
+border:0;
+color:#2d83bb;
+background-image:none;
+padding-right:0;
+}
+
+#text-neon-10 h3 a[href="/account/#register"] > span,
+#text-neon-10 h3 a[href="/account/#register"]:active > span,
+#text-neon-10 h3 a[href="/account/#register"]:focus > span,
+#text-neon-10 h3 a[href="/account/#register"]:hover > span,
+#text-neon-10 h3 a[href="/account/#register"]:visited > span{
+color:#232122;
+}
+
+
+
+#text-neon-10 p{
+	width: 110px;
+	margin: 20px;
+	font-weight:bold;
+}
+
+#text-neon-10 a {
+	color:#EACB1B;
+	position:relative;
+	top:5px;
+	margin-right: 10px;
+	padding-right: 20px;
+	background-image: url(/wp-content/uploads/point-icon.png);
+	background-position: right 2px;
+	background-repeat: no-repeat;
+	background-size: 13px;	
+}
+
+.linker {
+	position:relative;
+	top:-3px !important;
+}
+
+#sidebar1 h3{
+	display:none;
+}
+
+#sidebar2{
+	background-image: url(/wp-content/uploads/product-support-sidebarimg.jpg);
+	background-size: contain;
+	width: 256px;
+	height: 281px;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+}
+
+#sidebar2 h3{
+	display:none;
+}
+
+#sidebar3{
+	background-image: url(/wp-content/uploads/register-now-request-catalog.jpg);
+	background-size: contain;
+	width: 256px;
+	height: 176px;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+}
+
+#sidebar3 h3{
+	display:none;
+}
+
+
+
+#sidebar4{
+	background-image: url(/wp-content/uploads/Featured-brands-bg_03.jpg);
+	width: 256px;
+	height: 415px;
+	margin: 0 auto;
+	background-repeat: repeat-y;
+	padding-bottom: 20px;
+}
+
+#sidebar4 h3{
+	text-indent: -9999px;
+	background-image: url(/wp-content/uploads/Featured-brands-bg_04.jpg);
+	background-repeat: no-repeat;
+	height:48px;
+	width:256px;
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+
+
+#sidebar5{
+	background-image: url(/wp-content/uploads/Featured-brands-bg_02.jpg);
+	background-size: contain;
+	width: 256px;
+	height: 31px;
+	margin: 0 auto ;
+	background-repeat: no-repeat;
+}
+
+
+#sidebar6 {
+    background-image: url('/wp-content/uploads/register-newsletter.jpg');
+    background-size: contain;
+    max-width: 190px;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    padding: 60px 30px 30px;
+}
+
+#sidebar6 h3{
+	display:none;
+}
+
+#sidebar6 .gform_wrapper ul li{
+	list-style:none;
+	text-align:center;
+}
+
+
+#sidebar6 .gform_wrapper input{
+	width:100%;
+}
+
+#sidebar6 .gfield_required{
+	display:none;
+}
+
+#text-7 h3{
+	font-size:20px;
+	font-weight:bold;    
+	margin: 0px 0px 0.4em;
+    padding: 0px 0px 0.4em;
+	color:#000;
+}
+
+
+/*End Of Sidebar Widget Styles*/
+
+.post-195{
+}
+
+.boxed-layout #header, .boxed-layout #content, .boxed-layout #footer-widgets, .boxed-layout #footer {
+    padding-left:0/*0.5em*/;
+    padding-right:0/*0.5em*/;
+}
+
+#inner-wrapper {
+	border:none !important;
+	box-shadow:none !important;
+}
+
+#header{
+	/*padding-top:10px !important;
+	padding-bottom:10px !important;
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;*/
+}
+
+#navigation {
+    margin-bottom: 1em;
+}
+
+/*#footer-widgets{
+	background:#2d82bb;
+	color:#FFF;
+}
+
+#footer-widgets h3,#footer-widgets .widget .textwidget{
+	color:#FFF !important;
+}
+
+#footer, #footer p {
+	background-color:#084b88;
+	color:#fff !important;
+}*/ 
+
+/*.post-195 .shortcode-tabs{
+	margin: 20px 25px !important;
+}*/
+
+.post-195 .shortcode-tabs.boxed .tab,
+.post-195 .shortcode-tabs.boxed ul.tab_titles li,
+.post-195 .shortcode-tabs.boxed ul.tab_titles {
+    /*border-color: #999;	*/
+}
+
+
+/*.shortcode-tabs.boxed ul.tab_titles li {
+	margin-right:5px !important;
+	border: 1px solid;
+	border-bottom:none;
+}*/
+
+.breadcrumb{
+	margin-bottom:0px !important;
+}
+
+
+/*Styles for tabbed box on home*/
+
+/*.ui-tabs-anchor{
+	color:#2d82bb !important;
+	padding: 10px 23px !important;
+	font-weight: bold !important;
+	font-size: 14px !important;
+}
+
+.shortcode-tabs.boxed .tab {
+	-webkit-box-shadow: 0px 3px 4px 3px #D6D6D6;
+	box-shadow: 0px 3px 4px 3px #D6D6D6;
+	position:relative !important;
+	z-index:100 !important;
+}
+
+.shortcode-tabs li.nav-tab {
+	-webkit-box-shadow: -1px 0px 2px 1px #E0E0E0;
+	box-shadow: -1px 0px 2px 1px #E0E0E0;
+	position:relative !important;
+	z-index:-10 !important;
+}
+
+.ui-tabs-active, ui-state-active{
+	border: none !important;
+}
+
+ul.products, li.product {
+	    margin-bottom: 0 !important;
+}
+
+.shortcode-tabs.boxed img {
+	min-height: 108px;
+}
+.tab a.button {
+	background-color: #52a82b !important
+}
+
+.ui-tabs-anchor {
+	color:#333 !important;
+}*/
+
+/* ENd Of Styles for tabbed box on home*/
+
+.home-category{
+	margin: 30px 0px !important;
+	-webkit-box-shadow: 0px 3px 4px 3px #D6D6D6;
+	box-shadow: 0px 3px 4px 3px #D6D6D6;
+	padding-bottom:20px;
+}
+
+.home-category h4{
+	text-align: left;
+	width: 94%;
+	background-color: #D4D4D4;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding:5px 3%;
+}
+
+.home-category a.button{
+	background-color: #52a82b !important;
+	margin-bottom:15px;
+}
+
+.price{
+	display: none !important;
+}
+
+/*Styles for footer widgets*/
+
+/*#footer{
+	padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+}
+
+#footer-widgets .widget ul li a{
+	color:#fff !important;
+}
+
+#footer-widgets .widget ul li{
+	list-style:none !important;
+}*/
+
+.simple-social-icons ul li a{
+	border-radius: 20px !important;
+	padding: 9px 12px !important;
+	margin: 0px 6px 0px !important;
+}
+
+.social-facebook {
+	background-color:#2b509d !important;
+}
+
+/*.footer-widget-1 .widget, .footer-widget-1 hr{
+	    margin: 0px 0px 5px;
+		line-height: 1.4;
+		color:#58A2D3;
+}*/
+
+#text-20 img, #text-21 img{
+	height: 30px !important;
+	margin: 5px 5px 0 0;
+	float:left;
+}
+
+#text-20, #text-21{
+	font-size:14px !important;
+}
+
+#text-21{
+	font-weight:bold;
+}
+
+/*#footer-widgets h3{
+	text-transform:uppercase;
+}
+
+#footer-widgets .block {    
+	margin-right: 1%;
+    margin-left: 1%;
+    float: left;
+}*/
+
+.hablas{
+	background-image:url(/wp-content/uploads/hablas.jpg);
+	height:55px;
+	width:241px;
+}
+
+.simple-social-icons-2 li{
+	    margin: 0px 0px 0px !important;
+}
+
+/*Home slider styles*/
+
+.soliloquy-caption {
+	width: 40% !important;
+    margin-left: 80px !important;
+    top: 50px !important;
+	text-align:left !important;
+}
+
+@font-face {
+font-family: 'gabo_driveregular';
+src: url('gabodrive-webfont.eot');
+src: url('gabodrive-webfont.eot?#iefix') format('embedded-opentype'),
+	 url('gabodrive-webfont.woff2') format('woff2'),
+	 url('gabodrive-webfont.woff') format('woff'),
+	 url('gabodrive-webfont.ttf') format('truetype'),
+	 url('gabodrive-webfont.svg#gabo_driveregular') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+
+.soliloquy-caption h2{
+	color:#fff !important;
+	text-align:left !important;
+	font-size: 80px;
+	margin: 0 0 0;
+	line-height: 1;
+	font-family:'gabo_driveregular',helvetica,sans-serif;	
+	font-weight:normal;
+}
+
+.soliloquy-caption h4{
+	color:#eccc1b !important;
+	text-align:left !important;
+	margin: 0 0 0;
+	font-size: 21.5px;
+}
+
+.soliloquy-caption p{
+color:#fff !important;
+text-align:left !important;
+text-transform:uppercase;
+max-width:320px;
+margin:0;
+padding:0;
+font:bold 21px/95% 'open sans',helvetica,sans-serif;
+}
+
+
+
+.soliloquy-container .soliloquy-caption-inside{
+	background:none !important;
+	text-align: left !important;
+}
+
+.button {
+	/*font-family: 'Oswald', sans-serif !important;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 24px;
+    border: 1px solid #639ac2;
+    border-radius: 4px;
+    background: #36b3ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#36b3ff), to(#1d5f8f));
+    background: -moz-linear-gradient(top, #36b3ff, #1d5f8f);
+    background: linear-gradient(to bottom, #36b3ff, #1d5f8f);
+    text-shadow: #113854 1px 1px 1px;
+    font: normal normal bold 22px arial;
+    color: #fff;
+    text-decoration: none;*/
+}
+.button:hover,
+.button:focus {
+    /*border: 1px solid #81c8fc;
+    background: #41d7ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#41d7ff), to(#2372ac));
+    background: -moz-linear-gradient(top, #41d7ff, #2372ac);
+    background: linear-gradient(to bottom, #41d7ff, #2372ac);
+    color: #ffffff;
+    text-decoration: none;*/
+}
+.button:active {
+    /*background: #1d5f8f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1d5f8f), to(#1d5f8f));
+    background: -moz-linear-gradient(top, #1d5f8f, #1d5f8f);
+    background: linear-gradient(to bottom, #1d5f8f, #1d5f8f);*/
+}
+
+#home-banner{
+	background-image: url(/wp-content/uploads/banner-background.jpg);
+	width:859px;
+	height:105px;	
+	text-align:left;
+	padding:10px;
+}
+
+#home-banner h2{
+	color:#fff !important;
+	text-align:left !important;
+	font-size: 60px;
+	margin: 0 0 0;
+	line-height: 1;
+	
+}
+
+#home-banner h4{
+	color:#eccc1b !important;
+	text-align:left !important;
+	margin: 0 0 0;
+	font-size: 16px;
+	width: 360px;
+}
+
+#bannerbutton{
+	float:right;
+	position: relative;
+	top: 35px;
+	right: 20px;
+}
+
+/* Styles for list cat page */
+
+/*ul.products li.type-product {
+	width:100% !important;
+	border: 1px solid #CCC;
+	margin-bottom:5px !important;
+	float:none;
+	margin: 0 auto;
+	height: 100px;
+	-webkit-box-shadow: 0px 0px 4px 3px #D6D6D6;
+	box-shadow: 0px 0px 4px 3px #D6D6D6;
+}
+
+ul.products li.type-product h3 {
+	display:none;
+}
+
+li.type-product img {
+	float:left;
+}*/
+
+#text-neon-8 #sub span{
+	position:relative;
+	top:-5px;
+}
+
+#text-11 h3{
+	position:relative;
+	left:-4px;
+}
+
+/*#footer-widgets h3{
+	border-bottom:none;
+}
+
+.footer-widget-2 .widget_nav_menu {
+	margin: 0 30px; 
+}*/
+
+li.gfield {
+	    list-style-type: none !important;
+}
+
+#gform_body input{
+	border: 1px solid #666 !important;
+}
+
+
+#gform_wrapper_1 .gfield_label {
+	display:none;
+}
+
+#gform_wrapper_1 #gform_submit_button_1{
+	position:relative;
+	top:-30px;
+}
+
+/*.footer-widget-1,
+.footer-widget-2,
+.footer-widget-3,
+.footer-widget-4 ,
+#footer-widgets.col-4 .block {
+	width:20%;
+	height:216px;
+	margin:0 -1px 0 0;
+	border-right: 1px solid #4A99CE;	
+	display:table-cell;
+}
+
+.footer-widget-1 {
+	padding: 0 4% 0 1%;
+}
+
+.footer-widget-2 {
+	padding: 0 4% 0 1%;
+}
+
+.footer-widget-3 {
+	padding: 0 0% 0 5%;
+}
+
+.footer-widget-4 {
+	padding: 0 0% 0 5%;
+	border-right: 0px solid #4A99CE;
+}
+
+#footer-widgets hr {
+	color:#4A99CE;
+}*/
+
+.page-id-195 #content #main{
+	width: 74.385% !important;
+	padding: 0px 0% !important;
+}
+
+body.two-col-right-1200 #main-sidebar-container #main {
+    width: 74.385% !important;
+	padding: 0 2%;
+}
+
+/*Category Page Templates*/
+
+/*ul.products li.product {
+	border-radius: 3px;
+	box-shadow:;	
+	-webkit-box-shadow: 0px 0px 5px 5px #cfcfcf;
+	box-shadow: 0px 0px 5px 5px #cfcfcf;
+	margin:3px;
+}
+
+ul.products li.product h3{
+	font-size: 16px;
+	color: #156398;
+	background-color: #f0f3f6;
+	padding: 12px 10px;
+}
+
+
+
+.catp{
+	font-size: 12px;
+    max-width: 200px;
+    margin: 0 auto 10px;
+}
+
+ul.products li.product img{
+	height:86px !important;
+}*/
+
+div.term-description {
+	margin-bottom:15px;
+}
+
+
+/*ul.products li.type-product p{
+	margin:5px;
+}
+
+ul.products li.type-product .prodmeta {
+	border-bottom: solid 1px;
+	padding:10px;
+}
+
+ul.products li.type-product .prodmeta a {
+	display:inline !important;
+}
+
+ul.products li.type-product .proddesc p{
+	font-size: 12px !important;
+    color: #52a82b !important;
+}
+
+ul.products li.type-product img {
+	padding-right: 5px !important;
+	margin-top:5px !important;
+	margin-right: 5px !important;
+	border-right: solid 1px #8E8E8E !important;
+}*/
+
+
+@media only screen and (max-width: 1100px) {
+	
+	.col-left, #main {
+    width: 100% !important;
+}
+
+	#sidebar{
+	margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	
+	
+#home-banner{
+	display:none;
+}
+	
+}
+
+@media only screen and (max-width: 680px) {
+	
+.shortcode-tabs.boxed ul.tab_titles li {
+    width: 100%;
+    text-align: center !important;
+}
+
+}

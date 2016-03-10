@@ -1,0 +1,409 @@
+/*Basic Grid*/
+.site {
+	width: 100%;
+	margin: 0 auto;
+}
+.wrap {
+	width: 90%;
+	max-width: 67.5em;
+	margin: 0 auto;
+	@include bp(62.5) {
+		width: 100%;
+	}
+}
+.sm-wrap {
+	position: relative;
+	width: 90%;
+	max-width: 45em;
+	margin: 0 auto;
+	@include bp(50) {
+		width: 100%;
+	}
+}
+.sidebar {
+	@include bp(50) {
+		float: left;
+		width: 24%;
+	}
+}
+.main-content {
+	@include bp(50) {
+		float: right;
+		width: 74%;
+		margin-left: 2%;
+	}
+}
+.reverse {
+	.main-content {
+		float: right;
+	}
+}
+.half {
+	margin-bottom: 2em;
+	@include bp(44) {
+		float: left;
+		width: 47.5%;
+		margin-bottom: 0;
+		&.first {
+			margin-right: 5%;
+		}
+		&.wide {
+			float: none;
+			width: 100%;
+			margin-bottom: 2em;
+			&.first {
+				margin-right: 0;
+			}
+		}
+	}
+	@include bp(50) {
+		&.wide {
+			float: left;
+			width: 47.5%;
+			margin-bottom: 0;
+			&.first {
+				margin-right: 5%;
+			}
+		}
+	}
+}
+.halves {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	> li {
+		display: block;
+		margin: 0 0 1em;
+	}
+	@include bp(44) {
+		> li {
+			float: left;
+			width: 47.5%;
+			margin: 0 5% 1em 0;
+			&:nth-child(even) {
+				margin: 0 0 1em;
+			}
+		}
+	}
+}
+.two-third {
+	@include bp(44) {
+		float: left;
+		width: 65%;
+		&.first {
+			margin-right: 5%;
+		}
+	}
+}
+.third {
+	@include bp(44) {
+		float: left;
+		width: 30%;
+		&.first {
+			margin-right: 5%;
+		}
+	}
+}
+.four-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	> li {
+		float: left;
+		width: 48%;
+		margin: 0 4% 1em 0;
+		&:last-child, &:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+	@include bp(50) {
+		> li {
+			width: 23.5%;
+			margin: 0 2% 1em 0;
+			&:nth-child(even) {
+				margin: 0 2% 1em 0;
+			}
+			&:last-child, &:nth-child(4n) {
+				margin: 0 0 1em;
+			}
+		}
+	}
+}
+.three-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	> li {
+		display: block;
+		margin-bottom: 1em;
+	}
+	&.wide {
+		> li {
+			float: left;
+			width: 48%;
+			margin: 0 4% 1em 0;
+			&:last-child, &:nth-child(even) {
+				margin-right: 0;
+			}
+		}
+	}
+	@include bp(44) {
+		> li {
+			float: left;
+			width: 30%;
+			margin: 0 5% 1em 0;
+			&:last-child, &:nth-child(3n) {
+				margin: 0 0 1em;
+			}
+		}
+		&.wide {
+			> li {
+				float: left;
+				width: 30%;
+				margin: 0 5% 1em 0;
+				&:nth-child(even) {
+					margin: 0 5% 1em 0;
+				}
+				&:last-child, &:nth-child(3n) {
+					margin: 0 0 1em;
+				}
+			}
+		}
+	}
+}
+.two-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	> li {
+		display: block;
+		margin-bottom: 1em;
+	}
+	&.wide {
+		> li {
+			float: left;
+			width: 48%;
+			margin: 0 4% 1em 0;
+			&:last-child, &:nth-child(even) {
+				margin-right: 0;
+			}
+		}
+	}
+	@include bp(44) {
+		> li {
+			float: left;
+			width: 48%;
+			margin: 0 4% 1em 0;
+			&:last-child, &:nth-child(even) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+.centered-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	li {
+		display: inline-block;
+		max-width: 47%;
+		margin: 0 6% 1em 0;
+		vertical-align: top;
+		&:nth-child(even) {
+			margin: 0 0 1em;
+		}
+	}
+	@include bp(44) {
+		li {
+			max-width: 30%;
+			margin: 0 5% 1em 0;
+			&:nth-child(even) {
+				margin: 0 5% 1em 0;
+			}
+			&:last-child, &:nth-child(3n) {
+				margin: 0 0 1em;
+			}
+		}
+	}
+}
+
+blockquote {
+	font-size: 0.875em;
+	font-style: italic;
+	color: darken($text, 5%);
+}
+hr {
+	display: block;
+	height: 1px;
+	width: 80%;
+	background: lighten(gray, 15%);
+	margin: 3em auto;
+	border: 0;
+}
+.gradient {
+  background-image:
+    radial-gradient(
+      #fff,
+      #e7e7e7
+    );
+}
+.btn, .button {
+	background: $blue;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	padding: 0.1875em 1em;
+	border-radius: 0.25em;
+	text-transform: uppercase;
+	&:hover {
+		background: darken($blue, 10%);
+		text-decoration: none;
+		color: #fff;
+	}
+}
+.product-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	> li {
+		text-align: center;
+		display: block;
+		margin: 0 0 1em;
+		padding: 1em;
+		@include bp(44) {
+			margin: 0;
+		}
+	}
+	&.three {
+		@include bp(44) {
+			> li {
+				float: left;
+				width: 33.33333%;
+				border-right: 1px solid darken( $gray, 10% );
+				&:last-child, &:nth-child(3n) {
+					border-right: 0;
+				}
+				&:nth-child(3n+4) {
+					clear: left;
+				}
+			}
+			a {
+				min-height: 13.625em;
+			}
+		}
+	}
+	&.four {
+		> li {
+			float: left;
+			width: 50%;
+			margin: 0;
+			padding: 0.75em 1em;
+			border-right: 1px solid darken( $gray, 10% );
+			border-bottom: 1px solid darken( $gray, 10% );
+			&:last-child, &:nth-child(even) {
+				border-right: 0;
+			}
+		}
+		a {
+			font-size: 0.9375em;
+			min-height: 10.4375em;
+		}
+		@include bp(50) {
+			> li {
+				width: 25%;
+				&:nth-child(even) {
+					border-right: 1px solid darken( $gray, 10% );
+				}
+				&:nth-child(4n) {
+					border-right: 0;
+				}
+			}
+		}
+	}
+	a {
+		display: block;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		color: $text;
+		img {
+			display: block;
+			margin: 0 auto 0.5em;
+			@include bp(44) {
+				max-width: 10em;
+			}
+		}
+		span {
+			background: $green;
+			color: #fff;
+			padding: 0.25em 1em;
+			border-radius: 0.25em;
+			text-transform: uppercase;
+			display: block;
+			margin: 0.5em auto 0;
+			max-width: 5em;
+		}
+		&:hover {
+			text-decoration: none;
+			span {
+				background: darken($green, 10%);
+			}
+		}
+	}
+}
+.content-section {
+	padding: 0 1em;
+	@include bp(50) {
+		padding: 0;
+	}
+}
+/**Override Parent**/
+#inner-wrapper {
+	padding: 0;
+}
+/*Modal*/
+.modalVideo {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: #333;
+	background: rgba(41,41,41,0.9);
+	transition: all 0.3s;
+	.modalContent {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 50%;
+		max-width: 630px;
+		min-width: 320px;
+		height: auto;
+		z-index: 2000;
+		visibility: hidden;
+		backface-visibility: hidden;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	&.showModal {
+		opacity: 1;
+		visibility: visible;
+		.modalContent {
+			visibility: visible;
+		}
+	}
+}
+.hideModal {
+	position: fixed;
+	bottom: 20%;
+	left: 50%;
+	text-align: center;
+	transform: translateX(-50%);
+	text-transform: uppercase;
+	font-size: 1.2em;
+	color: #fff;
+	text-decoration: none;
+	z-index: 2001;
+}

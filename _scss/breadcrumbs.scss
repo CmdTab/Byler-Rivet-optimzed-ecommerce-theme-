@@ -1,0 +1,52 @@
+.woocommerce-breadcrumb {
+	display: none;
+	border-top: 1px solid #c8c8c8;
+	border-bottom: 1px solid #c8c8c8;
+	margin: 1em 0;
+	font-weight: bold;
+	font-size: 0.875em;
+	a {
+		display: inline-block;
+		padding: 0 1.5em 0 0.75em;
+		position: relative;
+		line-height: 2.75em;
+		color: #787878;
+		font-weight: normal;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+			color: $blue;
+		}
+		&:first-of-type {
+			padding-left: 0;
+		}
+		&:nth-of-type(2) {
+			//display: none;
+		}
+		&:last-of-type {
+			margin-right: 0.75em;
+		}
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			height: 0;
+			width: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			border-top: 1.4em solid transparent;
+			border-bottom: 1.4em solid transparent;
+			border-left: 1.15em solid #fff;
+			z-index: 3;
+		}
+		&:after {
+			border-left: 1.15em solid #c8c8c8;
+			right: -1px;
+			z-index: 2;
+		}
+	}
+	@include bp(50) {
+		display: block;
+	}
+}

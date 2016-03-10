@@ -1,0 +1,151 @@
+#content {
+	padding: 0 1em;
+	@include bp(50) {
+		padding: 0;
+	}
+}
+#wrapper {
+	@include bp(50) {
+		padding: 0 1em;
+	}
+	@include bp(62.5) {
+		padding: 0 1em 2em;
+	}
+}
+.home {
+	#content {
+		padding: 0;
+	}
+}
+
+.home-content {
+	.sidebar {
+		@include bp(50) {
+			width: 20%;
+		}
+	}
+	.main-content {
+		@include bp(50) {
+			width: 78%;
+		}
+	}
+}
+#home-carousel {
+	margin: 0;
+	@include bp(50) {
+		margin: 0 0 2em;
+	}
+}
+.content-alt-group {
+	display: block;
+	@include bp(50) {
+		display: none;
+	}
+}
+.home-tabs {
+	.ui-tabs-anchor {
+		border-color: darken( $gray, 10% );
+		border-bottom: none;
+	}
+	.ui-tabs-panel {
+		.product-list li {
+			font-size: 0.875em;
+		}
+		@include bp(62.5) {
+			.product-list li {
+				font-size: 1em;
+			}
+		}
+	}
+
+}
+.thin-banner {
+	margin: 0 0 1.9em;
+	/*padding: 1em;
+	background: linear-gradient(to right, transparent, transparent 30%, transparentize(#aaa, 0.4)), url(images/grip.png);
+	background-size: auto auto, 5px 20px;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	img {
+		float: left;
+		width: 45%;
+		margin-right: 5%;
+		@include bp(44) {
+			width: 20%;
+			padding: 0 2em;
+			margin-right: 0;
+		}
+	}*/
+}
+.banner-content {
+	clear: both;
+	margin-bottom: 1em;
+	text-align: center;
+	h2 {
+		font-size: 3.5em;
+		font-family: 'Oswald', sans-serif;
+		color: #fff;
+		margin: 0;
+		text-transform: uppercase;
+		line-height: 1;
+	}
+	p {
+		color: $yellow;
+		font-weight: bold;
+		margin: 0.25em 0 0;
+		font-size: 1.05em;
+	}
+	@include bp(44) {
+		float: left;
+		width: 45%;
+		clear: none;
+		margin-bottom: 0;
+		text-align: left;
+	}
+}
+.banner-action {
+	float: left;
+	width: 50%;
+	text-align: center;
+	padding-top: 3em;
+	.btn {
+		text-shadow: 1px 1px $text;
+		border-bottom: 2px solid darken($blue, 10%);
+	}
+	@include bp(44) {
+		width: 35%;
+	}
+}
+.product-listing {
+	margin: 0 0 1em;
+	border: 1px solid darken($blue-gray, 10%);
+	border-top-left-radius: 0.25em;
+	border-top-right-radius: 0.25em;
+	h3 {
+		background: $blue-gray;
+		margin: 0;
+		padding: 0.75em 1em;
+		font-size: 1.25em;
+		line-height: 1;
+		border-bottom: 1px solid darken($blue-gray, 10%);
+	}
+	.product-list {
+		li {
+			&:hover {
+				a {
+					color: lighten( $green , 10% );
+				}
+				img {
+					border: 0.2em solid $active-blue;
+					box-shadow: 0 0 4px 1px lighten( $black , 15% );
+				}
+			}
+		}
+		img {
+			border: 0.2em solid transparent;
+		}
+	}
+}
