@@ -87,7 +87,7 @@ function add_loginout_link( $items, $args ) {
 // $tabs['reviews']['title'] = __( 'Customer Reviews' ); // Rename the reviews tab
 // $tabs['additional_information']['title'] = __( 'Key <abbr title="Specifications">Specs</abbr>' ); // Rename the additional information tab
 // return $tabs;
-// } 
+// }
 
 
 // Show empty categories, Chris
@@ -98,7 +98,7 @@ function add_loginout_link( $items, $args ) {
 // Set Excerpt Length
 
     add_filter( 'excerpt_length', 'woo_custom_excerpt_length', 10 );
- 
+
     function woo_custom_excerpt_length ( $length ) {
         $length = 25;
         return $length;
@@ -127,7 +127,7 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-	
+
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Main Navigation',
 		'menu_title'	=> 'Main Navigation',
@@ -153,15 +153,15 @@ if( function_exists('acf_add_options_page') ) {
 function loop_columns() {
 return 3; // 5 products per row
 }
-add_filter('loop_shop_columns', 'loop_columns', 999);	
+add_filter('loop_shop_columns', 'loop_columns', 999);
 /*Change Add to cart on product listing */
 
 add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );    // 2.1 +
- 
+
 function woo_archive_custom_cart_button_text() {
- 
+
         return __( 'Add to Quote', 'woocommerce' );
- 
+
 }
 add_action('woocommerce_after_shop_loop_item','replace_add_to_cart');
 function replace_add_to_cart() {
@@ -171,7 +171,7 @@ echo do_shortcode('<a href="'.$link.'" class="button view-product">View Product<
 }
 /*Remove results number*/
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
-//Reposition WooCommerce breadcrumb 
+//Reposition WooCommerce breadcrumb
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 
 function woocommerce_custom_breadcrumb(){
@@ -206,7 +206,17 @@ function create_post_type() {
 		'supports' => array('title', 'thumbnail', 'revisions', 'author')
 	);
 	register_post_type( 'pmenu', $menuArgs );
-
+	$sidebarArgs = array(
+		'label'  => 'Sidebar Widgets',
+		'labels' => array(
+			'singular_name' => 'Side Widget'
+			),
+		'public' => true,
+		'has_archive' => false,
+		'menu_position' => 75,
+		'supports' => array('title', 'editor', 'revisions')
+	);
+	register_post_type( 'side-widgets', $sidebarArgs );
 }
 add_action( 'init', 'create_post_type' );
 

@@ -14,8 +14,8 @@ global $post, $wp_query, $woo_options;
 
 			<div class="sidebar">
                 <?php woo_sidebar( 'primary' ); ?>
-                <?php 
-                    if( have_rows('add_sidebar_widget') ): 
+                <?php
+                    if( have_rows('add_sidebar_widget') ):
                     while ( have_rows('add_sidebar_widget') ) : the_row();
                     if( get_row_layout() == 'global_widget' ):
                 ?>
@@ -27,7 +27,7 @@ global $post, $wp_query, $woo_options;
                     </div>
                 <?php elseif( get_sub_field('which_widget') == 'repair' ) : ?>
                     <div class="tool-repair-widget gradient">
-                        <?php 
+                        <?php
                             $tool_repair_image = get_field('background_image' , 'option');
                         ?>
                         <img src="<?php echo $tool_repair_image['url']; ?>" alt="<?php echo $tool_repair_image['alt']; ?>" />
@@ -38,7 +38,7 @@ global $post, $wp_query, $woo_options;
                     </div>
                 <?php elseif( get_sub_field('which_widget') == 'support' ) : ?>
                     <div class="product-support-widget gradient">
-                        <?php 
+                        <?php
                             $product_support_image = get_field('widget2_background_image' , 'option');
                             $tool_image = get_field('widget2_background_image2' , 'option');
                         ?>
@@ -79,7 +79,7 @@ global $post, $wp_query, $woo_options;
                     </div>
                 <?php elseif( get_sub_field('which_widget') == 'catalog' ) : ?>
                     <div class="register-now-widget gradient">
-                        <?php 
+                        <?php
                             $free_catalog_image = get_field('widget_background3' , 'option');
                         ?>
                         <img src="<?php echo $free_catalog_image['url']; ?>" alt="<?php echo $free_catalog_image['alt']; ?>" />
@@ -116,7 +116,7 @@ global $post, $wp_query, $woo_options;
                                     </div>
                                 </div>
 
-                                <?php } else {?> 
+                                <?php } else {?>
 
                                 <div class="item">
                                     <a href="#">
@@ -129,7 +129,7 @@ global $post, $wp_query, $woo_options;
                                     </div>
                                 </div>
 
-                                <?php } $img_count++; ?> 
+                                <?php } $img_count++; ?>
 
                                 <?php endwhile; ?>
 
@@ -163,10 +163,10 @@ global $post, $wp_query, $woo_options;
                             <a href="#" class="btn">Sign Up Now</a>
                         </div>
                     </div>
-                
+
                 <?php endif; ?>
                 </div>
-                <?php 
+                <?php
                     elseif( get_row_layout() == 'menu_widget' ):
                     $menuID = get_sub_field('which_menu'); ?>
                 <div class="widget">
@@ -180,6 +180,16 @@ global $post, $wp_query, $woo_options;
                     <div class="widget">
                         <?php get_template_part( 'content', 'manufacturer' ); ?>
                     </div>
-                    
+                <?php elseif( get_row_layout() == 'custom_global' ): ?>
+					<?php
+						$post_object = get_sub_field('which_widget');
+						if( $post_object ):
+							$post = $post_object;
+							setup_postdata( $post );
+					?>
+					<div class="widget">
+						<?php the_content(); ?>
+					</div>
+					<?php wp_reset_postdata(); endif; ?>
                 <?php endif; endwhile; endif; ?>
             </div><!--sidebar-->

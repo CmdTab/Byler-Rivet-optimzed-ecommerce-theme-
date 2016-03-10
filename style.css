@@ -1,12 +1,12 @@
 /*
-Theme Name: Canvas by Optimized eCommerce
+Theme Name: Byler Rivet
 Theme URI: http://optimizedecommerce.com/themes/wordpress-woocommerce/canvas-child-theme/
 Author: Optimized eCommerce
 Author URI: http://optimizedecommerce.com/
 Description: A child theme for <a href="http://www.woothemes.com/products/canvas/">Canvas by WooThemes</a> that is optimized with SEO in mind, as well as improved website accessibility, analytics and conversion, media enhancements, page speed, readability, responsiveness, semantics (Schema) and social engagement options. Connect with Optimized eCommmerce on <a href="https://www.facebook.com/optimizedecommerce">Facebook</a>, <a href="#">Google+</a> and <a href="https://twitter.com/optimizedecom">Twitter</a>.
 Version: 1.0
 License: Not available
-License URI: 
+License URI:
 Tags: canvas, canvas child theme, accessible, analytics, conversion, e-commerce, ecommerce, microformats, optimized e-commerce, optimized ecommerce, page speed, responsive, schema, semantic, translation-ready, woothemes
 Template: canvas
 */
@@ -93,7 +93,7 @@ float:left;
 #sidebar {
 	width:20% !important;
 	min-width: 256px;
-	
+
 }
 
 .col-left, #main{
@@ -255,7 +255,7 @@ color:#232122;
 	background-image: url(/wp-content/uploads/point-icon.png);
 	background-position: right 7px;
 	background-repeat: no-repeat;
-	background-size: 13px;	
+	background-size: 13px;
 }
 
 #text-neon-9 li a{
@@ -282,7 +282,7 @@ color:#232122;
 	background-image: url(/wp-content/uploads/video-icon.png);
 	background-repeat: no-repeat;
 	background-position: 77px 5px;
-	background-size: 30px;	
+	background-size: 30px;
 	min-height: 28px;
 }
 
@@ -343,7 +343,7 @@ color:#232122;
 	background-image: url(/wp-content/uploads/point-icon.png);
 	background-position: right 2px;
 	background-repeat: no-repeat;
-	background-size: 13px;	
+	background-size: 13px;
 }
 
 .linker {
@@ -442,7 +442,7 @@ color:#232122;
 
 #text-7 h3{
 	font-size:20px;
-	font-weight:bold;    
+	font-weight:bold;
 	margin: 0px 0px 0.4em;
     padding: 0px 0px 0.4em;
 	color:#000;
@@ -487,7 +487,7 @@ color:#232122;
 #footer, #footer p {
 	background-color:#084b88;
 	color:#fff !important;
-}*/ 
+}*/
 
 /*.post-195 .shortcode-tabs{
 	margin: 20px 25px !important;
@@ -629,7 +629,7 @@ ul.products, li.product {
 	text-transform:uppercase;
 }
 
-#footer-widgets .block {    
+#footer-widgets .block {
 	margin-right: 1%;
     margin-left: 1%;
     float: left;
@@ -673,7 +673,7 @@ font-style: normal;
 	font-size: 80px;
 	margin: 0 0 0;
 	line-height: 1;
-	font-family:'gabo_driveregular',helvetica,sans-serif;	
+	font-family:'gabo_driveregular',helvetica,sans-serif;
 	font-weight:normal;
 }
 
@@ -738,7 +738,7 @@ font:bold 21px/95% 'open sans',helvetica,sans-serif;
 #home-banner{
 	background-image: url(/wp-content/uploads/banner-background.jpg);
 	width:859px;
-	height:105px;	
+	height:105px;
 	text-align:left;
 	padding:10px;
 }
@@ -749,7 +749,7 @@ font:bold 21px/95% 'open sans',helvetica,sans-serif;
 	font-size: 60px;
 	margin: 0 0 0;
 	line-height: 1;
-	
+
 }
 
 #home-banner h4{
@@ -803,7 +803,7 @@ li.type-product img {
 }
 
 .footer-widget-2 .widget_nav_menu {
-	margin: 0 30px; 
+	margin: 0 30px;
 }*/
 
 li.gfield {
@@ -832,7 +832,7 @@ li.gfield {
 	width:20%;
 	height:216px;
 	margin:0 -1px 0 0;
-	border-right: 1px solid #4A99CE;	
+	border-right: 1px solid #4A99CE;
 	display:table-cell;
 }
 
@@ -871,7 +871,7 @@ body.two-col-right-1200 #main-sidebar-container #main {
 
 /*ul.products li.product {
 	border-radius: 3px;
-	box-shadow:;	
+	box-shadow:;
 	-webkit-box-shadow: 0px 0px 5px 5px #cfcfcf;
 	box-shadow: 0px 0px 5px 5px #cfcfcf;
 	margin:3px;
@@ -928,7 +928,7 @@ ul.products li.type-product img {
 
 
 @media only screen and (max-width: 1100px) {
-	
+
 	.col-left, #main {
     width: 100% !important;
 }
@@ -939,16 +939,16 @@ ul.products li.type-product img {
 }
 
 @media only screen and (max-width: 900px) {
-	
-	
+
+
 #home-banner{
 	display:none;
 }
-	
+
 }
 
 @media only screen and (max-width: 680px) {
-	
+
 .shortcode-tabs.boxed ul.tab_titles li {
     width: 100%;
     text-align: center !important;
