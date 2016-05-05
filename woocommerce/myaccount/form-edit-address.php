@@ -25,6 +25,7 @@ get_currentuserinfo();
 	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php else : ?>
+<div class="account-wrap group">
 
 	<form method="post">
 
@@ -47,5 +48,5 @@ get_currentuserinfo();
 		</p>
 
 	</form>
-
+</div>
 <?php endif; ?>

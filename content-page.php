@@ -32,9 +32,14 @@
 <?php
 	woo_post_inside_before();
 ?>
-	<header>
-		<?php the_title( $title_before, $title_after ); ?>
-	</header>
+	<?php 
+		if ( is_account_page() ) {
+			
+		} else { ?>
+			<header>
+				<?php the_title( $title_before, $title_after ); ?>
+			</header>
+	<?php }?>	
 
 	<section class="entry">
 		<?php woo_get_template_part( 'content', 'flexible' ); ?>
