@@ -25,7 +25,7 @@ get_currentuserinfo();
 	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php else : ?>
-<div class="account-wrap group">
+<div class="account-wrap account-form-wrap group">
 
 	<form method="post">
 

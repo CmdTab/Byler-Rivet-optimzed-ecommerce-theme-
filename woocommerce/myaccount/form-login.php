@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 ?>
-<div class="wrap account-wrap group">
+<div class="account-wrap account-form-wrap group">
 	<?php wc_print_notices(); ?>
 
 	<?php do_action( 'woocommerce_before_customer_login_form' ); ?>

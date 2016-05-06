@@ -413,6 +413,8 @@
 	.product_meta_category {
 		padding: 1em 0;
 		font-size: 0.9em;
+		border-top: 1px solid #cdd4da;
+		border-bottom: 1px solid #cdd4da;
 		.spacer {
 			padding-left: 1.25em;
 			border-left: 1px solid darken($gray,10%);
@@ -462,6 +464,9 @@
 			border: none;
 			margin: 0;
 			padding: 0.5em 0 0.25em;
+			@include bp(44) {
+				border-bottom: 1px solid #cdd4da;
+			}
 			.button {
 				background-color: $green;
 				border-color: $green;
@@ -474,6 +479,15 @@
 				input {
 					float: none;
 				}
+			}
+		}
+		.woocommerce-products-compare-compare-button {
+			font-size: 0.875em;
+			@include bp(44) {
+				margin: 0 3% 0 0;
+				padding: 1em 0;
+				width: 17%;
+				float: left;
 			}
 		}
 	}
@@ -585,14 +599,14 @@
 		vertical-align: middle;
 	}
 }
-.question-section,
 .share-product-section {
-	padding: 0;
-	border-top: 1px solid #cdd4da;
-	border-bottom: 1px solid #cdd4da;
+	padding: 1em 0;
 	font-size: 0.875em;
+	border-top: 1px solid #cdd4da;
 	@include bp(44) {
-		padding: 0.5em 0;
+		border-top: none;
+		float: left;
+		width: 80%;
 	}
 	h4 {
 		font-size: 1em;
@@ -605,25 +619,42 @@
 		display: block;
 		float: left;
 	}
-	.question {
-		border-bottom: 1px solid $gray;
-		padding: 1em 0;
-		@include bp(44) {
-			float: left;
+	.question-section {
+		padding: 0;
+		text-align: left;
+		@include bp(30) {
+			float: right;
 			width: 65%;
-			margin-right: 5%;
-			padding-top: 1.75em;
+			text-align: right;
+		}
+		@include bp(44) {
+			width: 55%;
 			border-bottom: none;
 		}
-		img {
-			padding-right: 1em;
+		.question {
+			img {
+				float: none;
+				display: inline-block;
+				margin-bottom: -1.35em;
+			}
+			.submit-question-trigger {
+			   display: block;
+			   padding-left: 4em;
+			   padding-top: 0.25em;
+			}
 		}
 	}
-	.download-pdf {
-		padding: 1em 0;
+	.share-product-trigger {
+		padding-bottom: 1em;
+		display: block;
+		@include bp(30) {
+			float: left;
+			width: 35%;
+			padding-bottom: 0;
+		}
 		@include bp(44) {
 			float: left;
-			width: 30%;
+			width: 45%;
 		}
 		h4 {
 			font-weight: 400;
@@ -642,8 +673,8 @@
 	li {
 		font-size: 0.875em;
 	}
-	.product-question-form,
-	.share-product-form {
+	.share-product-form,
+	.product-question-form {
 		display: none;
 		background: rgba(0, 0, 0, 0.7);
 		width: 100%;
@@ -727,10 +758,6 @@
 			text-align: center;
 		}
 	}
-}
-.share-product-section {
-	border-bottom: none;
-	padding: 1em 0;
 	a {
 		color: $blue;
 		outline: none;

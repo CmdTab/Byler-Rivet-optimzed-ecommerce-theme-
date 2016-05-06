@@ -54,45 +54,47 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-		<!-- Questions about this product -->
-			<div class="share-product-section group">
-				<a href="#" class="share-product-trigger">
-					<img src="<?php echo get_bloginfo('template_directory'); ?>/images/mail-icon.png" />
-					Share this Product
-				</a>
-				<div class="share-product-form">
-					<?php the_field('share_product' , 'option'); ?>
+			<div class="group">
+			<!-- Questions about this product -->
+				<div class="share-product-section group">
+					<a href="#" class="share-product-trigger">
+						<img src="<?php echo get_bloginfo('template_directory'); ?>/images/mail-icon.png" />
+						Share this Product
+					</a>
+					<div class="share-product-form group">
+						<?php the_field('share_product' , 'option'); ?>
+					</div>
+					<div class="question-section group">
+						<div class="product-question-form group">
+							<?php the_field('product_question_form' , 'option'); ?>
+						</div>
+						<div class="question group">
+							<h4><img src="<?php echo get_bloginfo('template_directory'); ?>/images/qa.png" />Questions about this product</h4>
+							<a href="#" class="submit-question-trigger">Submit Here</a>
+						</div>
+						<!-- <div class="download-pdf">
+							<h4>Download Catalog PDF's</h4>
+							<ul>
+								<li>
+									<?php // if( get_field('product_byler_rivet_pdf') ): ?>
+										<img src="<?php // echo get_bloginfo('template_directory'); ?>/images/pdf.png" />
+										<a href="<?php // the_field('product_byler_rivet_pdf'); ?>" target="_blank" >Byler Rivet</a>
+
+									<?php // endif; ?>
+								</li>
+								<li>
+									<?php // if( get_field('product_brochure_pdf') ): ?>
+									<img src="<?php // echo get_bloginfo('template_directory'); ?>/images/pdf.png" />
+										<a href="<?php // the_field('product_brochure_pdf'); ?>" target="_blank" >Byler Rivet Manuals</a>
+
+									<?php // endif; ?>
+								</li>
+							</ul>
+						</div> -->
+					</div>
 				</div>
 			</div>
-			<div class="question-section group">
-				<div class="product-question-form">
-					<?php the_field('product_question_form' , 'option'); ?>
-				</div>
-				<div class="question">
-					<img src="<?php echo get_bloginfo('template_directory'); ?>/images/qa.png" />
-					<h4>Questions about this product</h4>
-					<a href="#" class="submit-question-trigger">Submit Here</a>
-				</div>
-				<div class="download-pdf">
-					<h4>Download Catalog PDF's</h4>
-					<ul>
-						<li>
-							<?php if( get_field('product_byler_rivet_pdf') ): ?>
-								<img src="<?php echo get_bloginfo('template_directory'); ?>/images/pdf.png" />
-								<a href="<?php the_field('product_byler_rivet_pdf'); ?>" target="_blank" >Byler Rivet</a>
-
-							<?php endif; ?>
-						</li>
-						<li>
-							<?php if( get_field('product_brochure_pdf') ): ?>
-							<img src="<?php echo get_bloginfo('template_directory'); ?>/images/pdf.png" />
-								<a href="<?php the_field('product_brochure_pdf'); ?>" target="_blank" >Byler Rivet Manuals</a>
-
-							<?php endif; ?>
-						</li>
-					</ul>
-				</div>
-			</div>
+			
 			<?php
 				if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 

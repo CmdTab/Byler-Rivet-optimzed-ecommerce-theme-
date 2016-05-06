@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 wc_print_notices(); ?>
-<div class="wrap account-wrap group">
+<div class="account-wrap group">
 	<header>
 		<h1 class="title entry-title"><?php the_title( $title_before, $title_after ); ?></h1>
 	</header>

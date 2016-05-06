@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php wc_print_notices(); ?>
-<div class="account-wrap group">
+<div class="account-wrap account-form-wrap group">
 	<form action="" method="post">
 
 		<h3>Your Account</h3>
