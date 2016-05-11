@@ -63,7 +63,7 @@ add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 function add_loginout_link( $items, $args ) {
     if (is_user_logged_in() && $args->theme_location == 'top-menu') {
 //        $items .= '<li><a href="'. wp_logout_url() .'">Log Out</a></li>';
-        $items .= '<li><a href="'. site_url('account/') .'">Account/Log Out</a></li>';
+        $items .= '<li><a href="'. site_url('account/') .'">My Account</a></li>';
     }
     elseif (!is_user_logged_in() && $args->theme_location == 'top-menu') {
 //      	  $items .= '<li><a href="'. site_url('wp-login.php') .'">Log In</a></li>';

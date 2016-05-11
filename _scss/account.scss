@@ -1,26 +1,172 @@
+#main {
+	width: 100% !important;
+}
+.account-login {
+	width: 100%;
+	margin: 0 auto;
+	@include bp(44) {
+		width: 75%;
+	}
+}
+.account-forms {
+	width: 100%;
+	@include bp(50) {
+		float: left;
+		width: 72.5%;
+	}
+}
+.account-sidebar {
+	width: 100%;
+	margin-bottom: 1.5em;
+	font-size: 1em;
+	margin: 2em 0 0;
+	padding: 1em 0 0.5em;
+	@include bp(50) {
+		float: left;
+		width: 25%;
+		margin-right: 2.5%;
+		padding: 0;
+	}
+	h2 {
+		background-color: lighten($gray,2%);
+		color: $blue;
+		font-weight: normal;
+		font-size: 1.75em;
+		margin: 0;
+		padding: 0.5em;
+		border-bottom: 2px solid white;
+	}
+	.account-navigation {
+		border: 0.15em solid darken($gray,5%);
+		border-bottom: none;
+		border-right: none;
+		padding: 0;
+		background: $blue-gray;
+		@include bp(50) {
+			border: none;
+		}
+		a {	
+			text-align: left;
+			border-bottom: 0.15em solid white;
+			padding: 0.5em 0.5em 0.5em 2em;
+			display: block;
+			color: $text;
+			font-size: 0.875em;
+			&:last-child {
+				border-bottom: none;
+			}
+			&:hover {
+				background: $green;
+				color: white;
+				text-decoration: none;
+			}
+			@include bp(50) {
+				text-align: left;
+				border: none;
+				width: 100%;
+				padding: 0.5em 2em;
+				border-bottom: 2px solid white;
+			}
+		}
+	}
+	.account-wrap h2 {
+		font-size: 2em;
+	}
+	.woocommerce-message {
+		background: $green;
+		color: white;
+	}
+}
 .account-wrap {
 	margin: 0 auto;
-	width: 90%;
-	padding: 2em;
+	width: 100%;
 	font-size: 0.875em;
+	background-color: lighten($gray, 2%);
+	padding: 1em;
 	@include bp(50) {
-		width: 100%;
-		padding: 0;
+		padding: 1em 2em;
 		font-size: 1em;
 		margin: 2em 0;
+		background-color: lighten($gray, 2%);
 		/*box-shadow: 0 0 10px 0 #ccc;
 		border: 0.15em solid darken($gray,5%);*/
 	}
 	.entry-title,
-	h2 {
-		margin-bottom: 0.5em;
+	h2,
+	h3, {
+		line-height: 1.6em;
+		background-color: lighten($gray,2%);
+		color: $blue;
+		font-weight: normal;
+		padding: 0;
+		margin: 0;
+		@include bp(50) {
+			padding: 0 0 0.5em;
+		}
 	}
-	.myaccount_user,
+	.entry-title {
+		font-size: 2em;
+		margin-right: 0.25em;
+		padding: 0;
+	}
+	h3 {
+		color: $blue;
+		font-weight: normal;
+		font-size: 1.25em;
+	}
+	hr {
+		width: 110%;
+		height: 0.6em;
+		background-color: white;
+		margin: 0 0 0 -5%;
+		@include bp(50) {
+			height: 0.15em;
+			margin-bottom: 1em;
+		}
+	}
+	header {
+		padding-bottom: 0.5em;
+		.entry-title {
+			display: inline-block;
+		}
+		a {
+			font-size: 0.875em
+		}
+	}
+	.myaccount_user {
+		padding: 0 0 0.5em;
+		@include bp(50) {
+			padding: 0;
+		}
+	}
 	.myaccount_address {
-		border-bottom: 0.15em solid $gray;
-		padding-bottom: 1.5em;
+		padding: 0 0 0.5em;
+		@include bp(50) {
+			padding: 1em 0;
+			margin-bottom: 1em;
+		}
+	}
+	.col-1.address,
+	.col-2.address {
+		margin: 0 auto;
+		background: lighten($blue-gray, 5%);
+		padding: 1em;
+	}
+	.col-1.address {
+		border-bottom: 0.5em solid white;
+		@include bp(50) {
+			border-bottom: none;
+			margin-top: 2em;
+			margin-bottom: 1em;
+		}
+	}
+	.col-2.address {
+		@include bp(50) {
+			margin-bottom: 1em;
+		}
 	}
 	label {
+		font-size: 0.875em;
 		padding-bottom: 0.25em;
 		&.inline {
 			margin-top: 0.5em;
@@ -29,17 +175,27 @@
 			}
 		}
 	}
-	input [type="text"] {
+	input,
+	textarea {
 		font-size: 0.9em;
+		padding: 0.5em;
+		border: 0.15em solid $blue-gray;
+		border-radius: 0;
 	}
 	input[type="submit"] {
 		border: 0.15em solid $blue;
 		font-size: 1.25em;
+		border-radius: 0.25em;
+		padding: 0.25em 1.25em;
 	}
 	fieldset {
-		border: 0.15em solid darken($gray,5%);
-		padding: 2em;
+		border: 0.15em solid $blue-gray;
+		padding: 1em 2em;
 		margin: 2em auto;
+		background-color: $blue-gray;
+		h3 {
+			background: none;
+		}
 	}
 	.form-row {
 		width: 100%;
@@ -65,9 +221,121 @@
 			}
 		}
 	}
-}
-.account-form-wrap {
-	@include bp(50) {
-		max-width: 50em;
+	&.account-address {
+		padding: 0;
+		@include bp(50) {
+			padding: 1em 2em;
+		}
+		h2 {
+			padding: 0.5em 0.5em 0;
+			@include bp(50) {
+				padding: 0;
+			}
+		}
+		h3 {
+			background: none;
+		}
+		.myaccount_address {
+			padding: 1em;
+			border-bottom: 0.5em solid white;
+			margin: 0;
+			@include bp(50) {
+				padding: 0;
+				border: none;
+			}
+		}
 	}
+	&.lost-password {
+		max-width: 50em;
+		margin: 2em auto 0;
+	}
+	mark {
+		background-color: transparent;
+		color: $blue;
+	}
+}
+.shop_table,
+.shop_table.order_details {
+	width: 100%;
+	margin: 0;
+	border: none !important;
+	@include bp(50) {
+		margin-bottom: 1em;
+	}
+	thead {
+		th {
+			padding: 1em !important;
+			border-right: 1px solid white !important;
+			border-bottom: 1px solid white !important;
+			text-align: left;
+			background-color: $blue-gray !important;
+			&:last-of-type {
+				border-right: none !important;
+			}
+		}
+	}
+	tbody,
+	tfoot {
+		border-top: 1px solid white !important;
+		.order {
+			border-bottom: 1px solid white !important;
+		}
+		td,
+		th {
+			padding: 0.35em;
+			border-right: 1px solid white;
+			border-bottom: 1px solid white !important;
+			background-color: lighten($blue-gray,5%) !important;
+			&:last-of-type {
+				border-right: none;
+			}
+			@include bp(50) {
+				padding: 0.875em;
+			}
+		}
+		.order-actions {
+			text-align: center;
+			@include bp(50) {
+				text-align: left;
+			}
+		}
+	}
+}
+.shop_table.order_details {
+	font-size: 0.875em;
+	dt,
+	dd {
+		display: inline;
+	}
+	th {
+		text-align: left;
+	}
+}
+.details_section {
+	padding: 1em;
+	background: lighten($blue-gray,2.5%);
+	header {
+		padding: 0;
+		margin: 0;
+	}
+	h2,
+	h3 {
+		background: none;
+		padding: 0;
+	}
+	.title {
+		padding-top: 1em;
+		margin: 0;
+	}
+}
+.woocommerce:before,
+.woocommerce:after {
+	content:"";
+	display:table;
+}
+.woocommerce:after {
+	clear:both;
+}
+.woocommerce {
+	zoom:1;
 }

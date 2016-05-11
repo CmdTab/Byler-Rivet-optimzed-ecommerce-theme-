@@ -22,52 +22,71 @@ if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shippi
 } else {
 	$page_title = apply_filters( 'woocommerce_my_account_my_address_title', __( 'My Address', 'woocommerce' ) );
 	$get_addresses    = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' =>  __( 'Billing Address', 'woocommerce' )
+		'billing' =>  __( 'Billing Address', 'woocommerce' ),
+		'shipping' => __( 'Shipping Address', 'woocommerce' )
 	), $customer_id );
 }
 
 $col = 1;
 ?>
-
-<h2><?php echo $page_title; ?></h2>
-
-<p class="myaccount_address">
-	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following address will be used when you submit a quote request. We will use this address to determine shipping costs.', 'woocommerce' ) ); ?>
-</p>
-
-<?php if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) echo '<div class="col2-set addresses">'; ?>
-
-<?php foreach ( $get_addresses as $name => $title ) : ?>
-
-	<div class="col-<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> address">
-		<header class="title">
-			<h3><?php echo $title; ?></h3>
-		</header>
-		<p>Is your address below correct? <a href="<?php echo wc_get_endpoint_url( 'edit-address', $name ); ?>"><?php _e( 'Click to edit your shipping address', 'woocommerce' ); ?></a>.</p>
-		<address>
-			<?php
-				$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(
-					'first_name'  => get_user_meta( $customer_id, $name . '_first_name', true ),
-					'last_name'   => get_user_meta( $customer_id, $name . '_last_name', true ),
-					'company'     => get_user_meta( $customer_id, $name . '_company', true ),
-					'address_1'   => get_user_meta( $customer_id, $name . '_address_1', true ),
-					'address_2'   => get_user_meta( $customer_id, $name . '_address_2', true ),
-					'city'        => get_user_meta( $customer_id, $name . '_city', true ),
-					'state'       => get_user_meta( $customer_id, $name . '_state', true ),
-					'postcode'    => get_user_meta( $customer_id, $name . '_postcode', true ),
-					'country'     => get_user_meta( $customer_id, $name . '_country', true )
-				), $customer_id, $name );
-
-				$formatted_address = WC()->countries->get_formatted_address( $address );
-
-				if ( ! $formatted_address )
-					_e( 'You have not set up this type of address yet.', 'woocommerce' );
-				else
-					echo $formatted_address;
-			?>
-		</address>
+<div class="account-sidebar group">
+	<h2>Welcome
+		<?php 
+			$current_user = wp_get_current_user();
+			echo esc_html($current_user->first_name);
+		?>
+	</h2>
+	<div class="account-navigation group">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">My Account</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">My Account Information</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/">My Addresses</a>
 	</div>
+</div>
+<div class="account-forms group">
+	<div class="account-wrap account-address group">
 
-<?php endforeach; ?>
+		<h2><?php echo $page_title; ?></h2>
 
-<?php if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) echo '</div>'; ?>
+		<p class="myaccount_address">
+			<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following address will be used when you submit a quote request. We will use this address to determine shipping costs.', 'woocommerce' ) ); ?>
+		</p>
+
+		<?php if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) echo '<div class="col2-set addresses">'; ?>
+
+		<?php foreach ( $get_addresses as $name => $title ) : ?>
+
+			<div class="col-<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> address">
+				<header class="title">
+					<h3><?php echo $title; ?></h3>
+				</header>
+				<p>Is your address below correct? <a href="<?php echo wc_get_endpoint_url( 'edit-address', $name ); ?>"><?php _e( 'Click to edit your billing/shipping address', 'woocommerce' ); ?></a>.</p>
+				<address>
+					<?php
+						$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(
+							'first_name'  => get_user_meta( $customer_id, $name . '_first_name', true ),
+							'last_name'   => get_user_meta( $customer_id, $name . '_last_name', true ),
+							'company'     => get_user_meta( $customer_id, $name . '_company', true ),
+							'address_1'   => get_user_meta( $customer_id, $name . '_address_1', true ),
+							'address_2'   => get_user_meta( $customer_id, $name . '_address_2', true ),
+							'city'        => get_user_meta( $customer_id, $name . '_city', true ),
+							'state'       => get_user_meta( $customer_id, $name . '_state', true ),
+							'postcode'    => get_user_meta( $customer_id, $name . '_postcode', true ),
+							'country'     => get_user_meta( $customer_id, $name . '_country', true )
+						), $customer_id, $name );
+
+						$formatted_address = WC()->countries->get_formatted_address( $address );
+
+						if ( ! $formatted_address )
+							_e( 'You have not set up this type of address yet.', 'woocommerce' );
+						else
+							echo $formatted_address;
+					?>
+				</address>
+			</div>
+
+		<?php endforeach; ?>
+
+		<?php if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) echo '</div>'; ?>
+
+	</div>
+</div>
