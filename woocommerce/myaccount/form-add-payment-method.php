@@ -12,11 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="account-sidebar group">
-	<h2>Welcome, <?php echo esc_html($current_user->user_firstname); ?> <?php echo esc_html($current_user->user_lastname); ?></h2>
+	<h2>Account Dashboard
+		<!-- Welcome, <?php // echo esc_html($current_user->user_firstname); ?> <?php // echo esc_html($current_user->user_lastname); ?> --></h2>
 	<div class="account-navigation group">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">My Account</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">My Account Information</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/">My Addresses</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">Account Dashboard</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/billing/">Account Information</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/view-quotes/">View Quotes</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">Change Password</a>
 	</div>
 </div>
 <div class="account-forms group">

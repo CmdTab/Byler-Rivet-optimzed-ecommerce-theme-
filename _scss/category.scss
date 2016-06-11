@@ -1,17 +1,17 @@
 .sub-categories {
 	margin: 2em 0;
 	ul.products li.product {
-		display: block;
+		/*display: block;
 		margin-bottom: 2em;
 		border-radius: 3px;
 		box-shadow: 0 0 0.25em 0.25em #cfcfcf;
 		text-align: center;
 		padding: 0 0 1.75em;
-		position: relative;
+		position: relative;*/
 		@include bp(44) {
-			float: left;
+			/*float: left;
 			width: 32%;
-			margin: 0 2% 2em 0;
+			margin: 0 2% 2em 0;*/
 			&:last-child, &:nth-child(3n) {
 				margin: 0 0 2em;
 			}

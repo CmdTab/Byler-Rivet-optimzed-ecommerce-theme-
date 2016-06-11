@@ -29,37 +29,23 @@ if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shippi
 
 $col = 1;
 ?>
-<div class="account-sidebar group">
-	<h2>Account Dashboard
-		<!-- Welcome <?php 
-			//$current_user = wp_get_current_user();
-			//echo esc_html($current_user->first_name);
-		?> -->
-	</h2>
-	<div class="account-navigation group">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">Account Dashboard</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/billing/">Account Information</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/view-quotes/">View Quotes</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">Change Password</a>
-	</div>
-</div>
-<div class="account-forms group">
+<div class="account-forms full group">
 	<div class="account-wrap account-address group">
 
-		<h2><?php echo $page_title; ?></h2>
+		<h2>Address</h2>
 
-		<p class="myaccount_address">
-			<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following address will be used when you submit a quote request. We will use this address to determine shipping costs.', 'woocommerce' ) ); ?>
-		</p>
+		<!-- <p class="myaccount_address">
+			<?php //echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following address will be used when you submit a quote request. We will use this address to determine shipping costs.', 'woocommerce' ) ); ?> 
+		</p>-->
 
 		<?php if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) echo '<div class="col2-set addresses">'; ?>
 
 		<?php foreach ( $get_addresses as $name => $title ) : ?>
 
-			<div class="col-<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> address">
-				<header class="title">
-					<h3><?php echo $title; ?></h3>
-				</header>
+			<div class="col-<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> address group">
+				<!-- <header class="title">
+					<h3><?php // echo $title; ?></h3>
+				</header> -->
 				<address>
 					<?php
 						$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(
@@ -82,6 +68,11 @@ $col = 1;
 							echo $formatted_address;
 					?>
 				</address>
+				<div class="address-info">
+					<?php echo get_user_meta( $customer_id, 'billing_phone', true ); ?>
+					<br />
+					<?php global $current_user; get_currentuserinfo(); echo $current_user->user_email; ?>
+				</div>
 			</div>
 
 		<?php endforeach; ?>

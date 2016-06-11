@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $current_user;
 
-$page_title = ( $load_address === 'billing' ) ? __( 'Edit Billing Address', 'woocommerce' ) : __( 'Edit Shipping Address', 'woocommerce' );
+$page_title = ( $load_address === 'billing' ) ? __( 'Edit Account Information', 'woocommerce' ) : __( 'Edit Shipping Address', 'woocommerce' );
 
 get_currentuserinfo();
 ?>
@@ -26,11 +26,12 @@ get_currentuserinfo();
 
 <?php else : ?>
 <div class="account-sidebar group">
-	<h2>Welcome, <?php echo esc_html($current_user->user_firstname); ?> <?php echo esc_html($current_user->user_lastname); ?></h2>
+	<h2>Account Dashboard <!-- Welcome, <?php //echo esc_html($current_user->user_firstname); ?> <?php //echo esc_html($current_user->user_lastname); ?> --></h2>
 	<div class="account-navigation group">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">My Account</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">My Account Information</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/">My Addresses</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">Account Dashboard</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/billing/">Account Information</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/view-quotes/">View Quotes</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">Change Password</a>
 	</div>
 </div>
 <div class="account-forms group">
@@ -51,7 +52,7 @@ get_currentuserinfo();
 			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 
 			<p>
-				<input type="submit" class="button" name="save_address" value="<?php _e( 'Save Address', 'woocommerce' ); ?>" />
+				<input type="submit" class="button" name="save_address" value="<?php _e( 'Save Information', 'woocommerce' ); ?>" />
 				<?php wp_nonce_field( 'woocommerce-edit_address' ); ?>
 				<input type="hidden" name="action" value="edit_address" />
 			</p>

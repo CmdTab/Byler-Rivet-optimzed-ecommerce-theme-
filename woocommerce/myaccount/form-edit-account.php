@@ -12,40 +12,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<?php wc_print_notices(); ?>
 <div class="account-sidebar group">
-	<h2>Welcome 
-		<?php 
-			$current_user = wp_get_current_user();
-			echo esc_html($current_user->first_name);
-		?>
+	<?php wc_print_notices(); ?>
+	<h2>Account Dashboard 
+		<!-- <?php 
+			//$current_user = wp_get_current_user();
+			//echo esc_html($current_user->first_name);
+		?> -->
 	</h2>
 	<div class="account-navigation group">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">My Account</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">My Account Information</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/">My Addresses</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">Account Dashboard</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/billing/">Account Information</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/view-quotes/">View Quotes</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">Change Password</a>
 	</div>
 </div>
 <div class="account-forms group">
 	<div class="account-wrap group">
 		<form action="" method="post">
 
-			<h2>Edit Account Information</h2>
+			<h2>Change Your Password</h2>
 
 			<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 
-			<p class="form-row form-row-first">
-				<label for="account_first_name"><?php _e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $user->first_name ); ?>" />
+
+			<!-- <p class="form-row form-row-first">
+				<label for="account_first_name"><?php //_e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
+				<input type="text" class="input-text" name="account_first_name" id="account_first_name" value="<?php //echo esc_attr( $user->first_name ); ?>" />
 			</p>
 			<p class="form-row form-row-last">
-				<label for="account_last_name"><?php _e( 'Last name', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="account_last_name" id="account_last_name" value="<?php echo esc_attr( $user->last_name ); ?>" />
-			</p>
+				<label for="account_last_name"><?php //_e( 'Last name', 'woocommerce' ); ?> <span class="required">*</span></label>
+				<input type="text" class="input-text" name="account_last_name" id="account_last_name" value="<?php //echo esc_attr( $user->last_name ); ?>" />
+			</p> 
 			<p class="form-row form-row-wide">
-				<label for="account_email"><?php _e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="email" class="input-text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->user_email ); ?>" />
-			</p>
+				<label for="account_email"><?php //_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
+				<input type="email" class="input-text" name="account_email" id="account_email" value="<?php //echo esc_attr( $user->user_email ); ?>" />
+			</p> -->
 
 			<fieldset>
 				<h3><?php _e( 'Password Change', 'woocommerce' ); ?></h3>
@@ -74,6 +76,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</p>
 
 			<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
+
+			<?php //wc_get_template( 'myaccount/my-address-new.php' ); ?>
 			
 		</form>
 	</div>

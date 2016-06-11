@@ -16,16 +16,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php wc_print_notices(); ?>
 <div class="account-sidebar group">
-	<h2>Welcome 
+	<h2>Account Dashboard
+		<!-- Welcome 
 		<?php 
-			$current_user = wp_get_current_user();
-			echo esc_html($current_user->first_name);
-		?>
+			// $current_user = wp_get_current_user();
+			// echo esc_html($current_user->first_name);
+		?> -->
 	</h2>
 	<div class="account-navigation group">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">My Account</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">My Account Information</a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/">My Addresses</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account">Account Dashboard</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/billing/">Account Information</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/view-quotes/">View Quotes</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-account/">Change Password</a>
 	</div>
 </div>
 <div class="account-forms group">

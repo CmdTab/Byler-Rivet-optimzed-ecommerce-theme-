@@ -62,8 +62,8 @@ foreach ( $includes as $i ) {
 add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 function add_loginout_link( $items, $args ) {
     if (is_user_logged_in() && $args->theme_location == 'top-menu') {
-//        $items .= '<li><a href="'. wp_logout_url() .'">Log Out</a></li>';
-        $items .= '<li><a href="'. site_url('account/') .'">My Account</a></li>';
+    		$items .= '<li class="account-btn"><a href="'. site_url('account/') .'">My Account</a></li>';
+	     $items .= '<li><a href="'. wp_logout_url() .'">Log Out</a></li>';
     }
     elseif (!is_user_logged_in() && $args->theme_location == 'top-menu') {
 //      	  $items .= '<li><a href="'. site_url('wp-login.php') .'">Log In</a></li>';
@@ -220,6 +220,121 @@ function create_post_type() {
 }
 add_action( 'init', 'create_post_type' );
 
+/**
+ * Save the extra register fields.
+ *
+ * @param  int  $customer_id Current customer ID.
+ *
+ * @return void
+ */
+function wooc_save_extra_register_fields( $customer_id ) {
+	if ( isset( $_POST['billing_company'] ) ) {
+		// WordPress default first name field.
+		update_user_meta( $customer_id, 'billing_company', sanitize_text_field( $_POST['billing_company'] ) );
+
+		// WooCommerce billing first name.
+		update_user_meta( $customer_id, 'billing_company', sanitize_text_field( $_POST['billing_company'] ) );
+	}
+}
+
+add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
+
+/**
+ * Add new register fields for WooCommerce registration.
+ *
+ * @return string Register fields HTML.
+ */
+
+/*function add_company_name() {
+		$user->ID     = (int) get_current_user_id();
+        	$current_user = get_user_by( 'id', $user->ID );
+	?>
+
+
+	<p class="form-row form-row-first">
+		<label for="billing_company"><?php _e( 'Company Name', 'woocommerce' ); ?> <span class="required">*</span></label>
+		<input type="text" class="input-text" name="billing_company" id="billing_company" value="<?php echo esc_attr( $current_user->billing_company ); ?>" />
+	</p>
+
+	<?php
+}
+
+add_action( 'woocommerce_edit_account_form_start', 'add_company_name' );*/
+
+/**
+ * Validate the extra register fields.
+ *
+ * @param  string $username          Current username.
+ * @param  string $email             Current email.
+ * @param  object $validation_errors WP_Error object.
+ *
+ * @return void
+ */
+
+function validate_company_name( $username, $email, $validation_errors ) {
+
+	if ( isset( $_POST['billing_company'] ) && empty( $_POST['billing_company'] ) ) {
+		$validation_errors->add( 'billing_company_error', __( '<strong>Error</strong>: Company Name is required!.', 'woocommerce' ) );
+	}
+}
+
+add_action( 'user_profile_update_errors', 'validate_company_name', 10, 3 );
+
+/**
+ * Save the extra register fields.
+ *
+ * @param  int  $customer_id Current customer ID.
+ *
+ * @return void
+ */
+
+function save_extra_account_fields( $customer_id ) {
+	
+	if ( isset( $_POST['billing_company'] ) ) {
+		// WooCommerce billing phone
+		update_user_meta( $customer_id, 'billing_company', sanitize_text_field( $_POST['billing_company'] ) );
+	}
+}
+
+add_action( 'woocommerce_save_account_details', 'save_extra_account_fields' );
+
+/**
+ * Adds the ability to sort products in the shop based on the SKU
+ * Can be combined with tips here to display the SKU on the shop page: https://www.skyverge.com/blog/add-information-to-woocommerce-shop-page/
+ */
+
+function sv_add_sku_sorting( $args ) {
+
+	$orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+
+	if ( 'sku' == $orderby_value ) {
+		$args['orderby'] = 'meta_value';
+    		$args['order'] = 'asc'; 
+    		// ^ lists SKUs alphabetically 0-9, a-z; change to desc for reverse alphabetical
+		$args['meta_key'] = '_sku';
+	}
+
+	return $args;
+}
+add_filter( 'woocommerce_get_catalog_ordering_args', 'sv_add_sku_sorting' );
+
+
+function sv_sku_sorting_orderby( $sortby ) {
+	$sortby['sku'] = 'Sort by SKU';
+	// Change text above as desired; this shows in the sorting dropdown
+	return $sortby;
+}
+add_filter( 'woocommerce_catalog_orderby', 'sv_sku_sorting_orderby' );
+add_filter( 'woocommerce_default_catalog_orderby_options', 'sv_sku_sorting_orderby' );
+
+
+add_filter( 'woocommerce_localisation_address_formats', 'change_order_of_fields' );
+function change_order_of_fields( $formats ) {
+    // Rearrange these fields how you need, each country has an entry in the array like this:
+    $formats['US'] = "{company}\n{name}\n{address_1}\n{address_2}\n{city}, {state} {postcode}\n{country}";
+
+    return $formats;
+}
 
 
 /*-----------------------------------------------------------------------------------*/

@@ -127,7 +127,8 @@ background-color:transparent;
 #top ul.nav li#menu-item-23,
 #top ul.nav li#menu-item-22,
 #top ul.nav li#menu-item-21,
-#top ul.nav li#menu-item-20{
+#top ul.nav li#menu-item-20,
+#top ul.nav li.account-btn{
 padding-right:2px;
 background:transparent url('http://bylerrivetsupply.com/background-top-ul-nav-li.png') no-repeat right 5px;
 }

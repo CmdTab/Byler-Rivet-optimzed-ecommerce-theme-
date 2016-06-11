@@ -39,7 +39,7 @@ $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_q
 
 if ( $customer_orders ) : ?>
 
-	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent Quotes', 'woocommerce' ) ); ?></h2>
+	<!-- <h2><?php //echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent Quotes', 'woocommerce' ) ); ?></h2> -->
 
 	<table class="shop_table shop_table_responsive my_account_orders">
 
@@ -114,4 +114,8 @@ if ( $customer_orders ) : ?>
 			<?php endforeach; ?>
 		</tbody>
 	</table>
+	<?php else : ?>
+
+	<p>No quotes have been processed for this account.</p>
+
 <?php endif; ?>

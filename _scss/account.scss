@@ -1,11 +1,21 @@
 #main {
-	width: 100% !important;
+	/*width: 100% !important;*/
 }
 .account-login {
 	width: 100%;
 	margin: 0 auto;
 	@include bp(44) {
 		width: 75%;
+	}
+	ul.woocommerce-error {
+		background: rgba(255, 0, 0, 0.15) !important;
+		border: 0.1em solid red !important;
+		&:before {
+			color: red !important;
+			font-size: 1.5em;
+			top: 0.75em;
+			left: 0.25em;
+		}
 	}
 }
 .account-forms {
@@ -14,6 +24,18 @@
 		float: left;
 		width: 72.5%;
 	}
+	&.full {
+		width: 100%;
+		float: none;	
+		.account-address,
+		.account-wrap {
+			padding: 0;
+		}	
+	}
+}
+.update-password {
+    margin-top: -1.5em;
+    font-size: 0.85em !important;
 }
 .account-sidebar {
 	width: 100%;
@@ -75,6 +97,7 @@
 	.woocommerce-message {
 		background: $green;
 		color: white;
+	     margin-bottom: 0 !important;
 	}
 }
 .account-wrap {
@@ -125,13 +148,16 @@
 		}
 	}
 	header {
-		padding-bottom: 0.5em;
+		padding-bottom: 1em;
 		.entry-title {
 			display: inline-block;
 		}
 		a {
 			font-size: 0.875em
 		}
+	}
+	.account-container {
+		padding-bottom: 0;
 	}
 	.myaccount_user {
 		padding: 0 0 0.5em;
@@ -156,11 +182,18 @@
 		border-bottom: 0.5em solid white;
 		@include bp(50) {
 			border-bottom: none;
-			margin-top: 2em;
+			margin-top: 1em;
 			margin-bottom: 1em;
+		}
+		address {
+			@include bp(44) {
+				float: left;
+				width: 50%;
+			}
 		}
 	}
 	.col-2.address {
+		display: none !important;
 		@include bp(50) {
 			margin-bottom: 1em;
 		}
@@ -191,7 +224,7 @@
 	fieldset {
 		border: 0.15em solid $blue-gray;
 		padding: 1em 2em;
-		margin: 2em auto;
+		margin: 0.5em auto;
 		background-color: $blue-gray;
 		h3 {
 			background: none;
@@ -254,13 +287,32 @@
 		color: $blue;
 	}
 }
+.address-info {
+	font-style: italic;
+	@include bp(44) {
+	    float: left;
+	    width: 50%;
+	}
+    
+}
+.address-btn {
+	margin-top: 1em;
+	display: block;
+	width: 13.15em;
+	padding: 0.5em 0 !important;
+	text-align: center;
+	font-size: 1.1em !important;
+}
+.account-info-btn {
+	margin-bottom: 2em;
+}
 .shop_table,
 .shop_table.order_details {
 	width: 100%;
 	margin: 0;
 	border: none !important;
 	@include bp(50) {
-		margin-bottom: 1em;
+		margin-bottom: 0.5em !important;
 	}
 	thead {
 		th {
@@ -299,6 +351,32 @@
 				text-align: left;
 			}
 		}
+	}
+}
+.account-container {
+	padding-bottom: 3em;
+	.btn {
+		margin-top: 1em;
+		display: block;
+		text-align: center;
+		width: 13em;
+		padding: 0.5em;
+		font-size: 1.1em;
+	}
+	p {
+		margin-bottom: 0;
+		padding: 0.75em 1em;
+		border-bottom: 1px solid white;
+		font-size: 0.95em;
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+	span {
+		font-weight: 700;
+	}
+	.account-info {
+		background-color: #edf0f2;
 	}
 }
 .shop_table.order_details {
