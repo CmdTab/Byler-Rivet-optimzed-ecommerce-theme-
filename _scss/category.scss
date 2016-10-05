@@ -27,10 +27,9 @@
 		}
 		.image {
 			margin: 1em auto 0;
-			max-width: 90px;
 			@include bp(44) {
-				width: 90px;
-				height: 90px;
+				width: 140px;
+				height: 140px;
 			}
 		}
 		p {

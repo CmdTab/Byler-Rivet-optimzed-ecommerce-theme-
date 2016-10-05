@@ -16,18 +16,18 @@ function catHeight() {
 	jQuery('li.product').css('height', maxHeight);
 }
 function detailHeight() {
-	var currentHeight = 0;
-	var maxHeight = 0;
-	jQuery('li .prod-detail').each(function() {
-		currentHeight = jQuery(this).outerHeight();
-		if(currentHeight > maxHeight) {
-			maxHeight = currentHeight;
-			}
-		});
-	jQuery('li .prod-detail').css('height', maxHeight);
+	//var currentHeight = 0;
+	//var maxHeight = 0;
+	//jQuery('li .prod-detail').each(function() {
+	//	currentHeight = jQuery(this).outerHeight();
+	//	if(currentHeight > maxHeight) {
+	//		maxHeight = currentHeight;
+	//		}
+	//	});
+	//jQuery('li .prod-detail').css('height', maxHeight);
 }
 function megaToggle() {
-	jQuery('.with-mega a').click(function() {
+	jQuery('.with-mega > a').click(function() {
 		if(jQuery(this).siblings('.mega-menu').hasClass('expanded')) {
 			jQuery('.mega-menu').removeClass('expanded');
 			jQuery(this).removeClass('active');
@@ -271,7 +271,6 @@ jQuery(document).ready(function() {
 jQuery(window).load(function() {
 	var vw = jQuery(window).width();
 	gridHeight();
-	catHeight();
 	if (vw > 800) {
 		detailHeight();
 	}

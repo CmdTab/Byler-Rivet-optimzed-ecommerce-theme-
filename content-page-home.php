@@ -46,7 +46,7 @@
 					<?php $j=0; while ( have_rows('home_slide' ) ) : the_row(); ?>
 						<div class="item<?php if($j == 0){echo ' active';} ?>">
 							<?php if(get_sub_field('home_slide_url')): ?>
-							<a href = "<?php the_sub_field('slide_url'); ?>">
+							<!-- <a href = "<?php // the_sub_field('slide_url'); ?>"> -->
 							<?php endif; ?>
 							<div class="slide-content"><?php the_sub_field('home_slide_content'); ?></div>
 								<?php 
@@ -56,7 +56,7 @@
 								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 								<?php endif; ?>
 							<?php if(get_sub_field('home_slide_url')): ?>
-							</a>
+							<!-- </a> -->
 							<?php endif; ?>
 						</div>
 					<?php $j++; endwhile; ?>
@@ -145,6 +145,17 @@
 									<?php endwhile; ?>
 								</ul>
 								<?php endif; ?>
+							</div>
+						</div>
+					</li>
+					<?php elseif( get_row_layout() == 'mega_html' ): ?>
+					<li class="with-mega">
+						<a href = "#"><?php echo $title; ?></a>
+						<div class="mega-menu">
+							<div class="mega-content mega-text-area group">
+								<div>
+									<?php the_sub_field('mega_wysiwyg'); ?>
+								</div>
 							</div>
 						</div>
 					</li>

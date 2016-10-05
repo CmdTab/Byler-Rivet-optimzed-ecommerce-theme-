@@ -77,7 +77,7 @@ $col = 1;
 
 		<?php endforeach; ?>
 
-		<a href="<?php echo wc_get_endpoint_url( 'edit-address', $name ); ?>" class="btn address-btn"><?php _e( 'Edit Address', 'woocommerce' ); ?></a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>account/edit-address/billing/" class="btn address-btn"><?php _e( 'Edit Address', 'woocommerce' ); ?></a>
 
 		<?php if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) echo '</div>'; ?>
 

@@ -43,7 +43,7 @@ if ( ! $post->post_excerpt ) return;
 
 		<?php do_action( 'woocommerce_product_meta_start' ); ?>
 
-		<strong><abbr title="Manufacturer">MFR</abbr> Part <abbr title="Number">#</abbr></strong>:
+		<strong><abbr title="Manufacturer">MFG</abbr> Part <abbr title="Number">#</abbr></strong>:
 			<span class="brand-name">
 				<?php // the_field('manufacturer_brand_name_text'); ?>
 				<?php the_field('manufacturer_brand_part_number'); ?>

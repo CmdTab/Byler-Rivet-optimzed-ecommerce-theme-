@@ -30,10 +30,10 @@ global $post, $wp_query, $woo_options;
                         <?php
                             $tool_repair_image = get_field('background_image' , 'option');
                         ?>
-                        <img src="<?php echo $tool_repair_image['url']; ?>" alt="<?php echo $tool_repair_image['alt']; ?>" />
+                        <a href="http://bylerrivetsupply.com/services/rivet-gun-tooling-repair/"><img src="<?php echo $tool_repair_image['url']; ?>" alt="<?php echo $tool_repair_image['alt']; ?>" /></a>
                         <div class="widget-content">
                             <h4><?php the_field('widget_1_header' , 'option'); ?></h4>
-                            <h2><?php the_field ('widget_1_bottom_text' , 'option'); ?> <b><img src="<?php echo get_bloginfo('template_directory'); ?>/images/phone-icon.png" /> <?php the_field('widget_1_bottom_number' , 'option'); ?></b></h2>
+                            <h2><?php the_field ('widget_1_bottom_text' , 'option'); ?> <strong><img src="<?php echo get_bloginfo('template_directory'); ?>/images/phone-icon.png" /> <a href="tel:+18003253147"><?php the_field('widget_1_bottom_number' , 'option'); ?></strong></a></h2>
                         </div>
                     </div>
                 <?php elseif( get_sub_field('which_widget') == 'support' ) : ?>
@@ -48,31 +48,11 @@ global $post, $wp_query, $woo_options;
                         <div class="widget-content gradient">
                             <!-- <?php // the_field('widget_links' , 'option'); ?> -->
                                 <ul>
-                                    <li>
-                                        <a href = "#">Product Brochures
-                                            <span class="fa fa-chevron-circle-right"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href = "#">Schematics
-                                            <span class="fa fa-chevron-circle-right"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href = "#">Manuals
-                                            <span class="fa fa-chevron-circle-right"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href = "#">FAQs
-                                            <span class="fa fa-chevron-circle-right"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href = "#">Videos
-                                            <span class="fa fa-chevron-circle-right"></span>
-                                        </a>
-                                    </li>
+                                    <li><a href="http://bylerrivetsupply.com/resources/brochures-manuals/product-brochures/">Product Brochures <span class="fa fa-chevron-circle-right"></span></a></li>
+                                    <li><a href="http://bylerrivetsupply.com/resources/#schematics">Schematics <span class="fa fa-chevron-circle-right"></span></a></li>
+                                    <li><a href="http://bylerrivetsupply.com/resources/brochures-manuals/tool-manuals/">Manuals <span class="fa fa-chevron-circle-right"></span></a></li>
+                                    <li><a href="http://bylerrivetsupply.com/resources/rivet-tooling-faq/"><abbr title="Frequently Asked Questions">FAQ</abbr> <span class="fa fa-chevron-circle-right"></span></a></li>
+                                    <li><a href="http://bylerrivetsupply.com/resources/#videos">Videos <span class="fa fa-chevron-circle-right"></span></a></li>
                                 </ul>
                             <img src="<?php echo $tool_image['url']; ?>" alt="<?php echo $tool_image['alt']; ?>" class="product-tool" />
                         </div>
@@ -82,10 +62,8 @@ global $post, $wp_query, $woo_options;
                         <?php
                             $free_catalog_image = get_field('widget_background3' , 'option');
                         ?>
-                        <img src="<?php echo $free_catalog_image['url']; ?>" alt="<?php echo $free_catalog_image['alt']; ?>" />
-                        <a href="#" class="sidebar-btn"><?php the_field('widget_bottom_text' , 'option'); ?>
-                            <span class="fa fa-chevron-circle-right"></span>
-                        </a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>register"><img src="<?php echo $free_catalog_image['url']; ?>" alt="<?php echo $free_catalog_image['alt']; ?>" /></a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>register" class="sidebar-btn"><?php the_field('widget_bottom_text' , 'option'); ?> <span class="fa fa-chevron-circle-right"></span></a>
                     </div>
                 <?php elseif( get_sub_field('which_widget') == 'slider' ) : ?>
                     <div class="featured-brands-widget">
@@ -157,8 +135,8 @@ global $post, $wp_query, $woo_options;
                             <img src="<?php echo get_bloginfo('template_directory'); ?>/images/newsletter-icon.jpg" />
                         </h1>
                         <div class="text-fields">
-                            <input type="text" name="input" value="Name*">
-                            <input type="text" name="input" value="Email*">
+                            <input type="text" name="input" value="" placeholder="Name *">
+                            <input type="text" name="input" value="" placeholder="Email *">
                             <p>*Required Fields</p>
                             <a href="#" class="btn">Sign Up Now</a>
                         </div>

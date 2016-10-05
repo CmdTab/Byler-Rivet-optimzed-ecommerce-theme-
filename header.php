@@ -16,6 +16,7 @@
 <?php wp_head(); ?>
 <?php woo_head(); ?>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/josh.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/chris.css">
 </head>
 <body <?php body_class(); ?>>
 <div id="top-bar">
@@ -134,6 +135,17 @@
 							<?php endwhile; ?>
 						</ul>
 						<?php endif; ?>
+					</div>
+				</div>
+			</li>
+			<?php elseif( get_row_layout() == 'mega_html' ): ?>
+			<li class="with-mega">
+				<a href = "#"><?php echo $title; ?></a>
+				<div class="mega-menu">
+					<div class="mega-content mega-text-area group">
+						<div>
+							<?php the_sub_field('mega_wysiwyg'); ?>
+						</div>
 					</div>
 				</div>
 			</li>

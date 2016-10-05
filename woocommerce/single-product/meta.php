@@ -18,7 +18,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 
-	<strong><abbr title="Manufacturer">MFR</abbr> Part <abbr title="Number">#</abbr></strong>: <?php the_field('manufacturer_brand_name_text'); ?> <?php the_field('manufacturer_brand_part_number'); ?><br/>
+	<strong><abbr title="Manufacturer">MFG</abbr> Part <abbr title="Number">#</abbr></strong>: <?php the_field('manufacturer_brand_name_text'); ?> <?php the_field('manufacturer_brand_part_number'); ?><br/>
 
 	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
 

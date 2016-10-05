@@ -66,8 +66,8 @@ function add_loginout_link( $items, $args ) {
 	     $items .= '<li><a href="'. wp_logout_url() .'">Log Out</a></li>';
     }
     elseif (!is_user_logged_in() && $args->theme_location == 'top-menu') {
-//      	  $items .= '<li><a href="'. site_url('wp-login.php') .'">Log In</a></li>';
-   		$items .= '<li><a href="'. site_url('account/') .'">Log In/Register</a></li>';
+      	$items .= '<li class="menu-item-login"><a href="'. site_url('account') .'">Log In</a></li>';
+   		$items .= '<li><a href="'. site_url('account/register') .'">Register</a></li>';
 //      	  $items .= '';
     }
     return $items;

@@ -74,7 +74,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			
 			<ul class="prod-meta">
 				<?php if(get_field('manufacturer_brand_part_number')): ?>
-				<li><span><abbr title="Manufacturer">MFR</abbr> Part #</span> <a href="<?php the_permalink(); ?>"><?php the_field('manufacturer_brand_part_number'); ?></a></li>
+				<li><span><abbr title="Manufacturer">MFG</abbr> Part #</span> <a href="<?php the_permalink(); ?>"><?php the_field('manufacturer_brand_part_number'); ?></a></li>
 				<?php endif; ?>
 				<li><span>Item #</span> <a href="<?php the_permalink(); ?>"><?php echo $product->sku; ?></a></li>
 				<?php if ( function_exists('woo_add_compare_button' ) ): ?>
